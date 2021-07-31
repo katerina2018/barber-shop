@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
     <title>BarberShop</title>
 </head>
 
@@ -155,17 +157,22 @@
         <section>
             <span class="sup-title-primary">На латинском языке “барба” означает “борода”</span>
             <ul class="image-gallery">
-                <li class="galleri-item"><img src="./images/foto-1.jpg" alt="" width="270"></li>
-                <li class="galleri-item"><img src="./images/foto-2.jpg" alt="" width="270"></li>
-                <li class="galleri-item"><img src="./images/foto-3.jpg" alt="" width="270"></li>
-                <li class="galleri-item"><img src="./images/foto-4.jpg" alt="" width="270"></li>
+                <li class="galleri-item"><img src="./images/foto-1.jpg" alt="Стрижка машинкой" width="270"></li>
+                <li class="galleri-item"><img src="./images/foto-2.jpg" alt="Намазывание пеной" width="270"></li>
+                <li class="galleri-item"><img src="./images/foto-3.jpg" alt="Пропаривание лица" width="270"></li>
+                <li class="galleri-item"><img src="./images/foto-4.jpg" alt="Стрижка опасной бритвой" width="270"></li>
             </ul>
         </section>
     </main>
-    <footer id="footer">
-        <div>Form</div>
+    <footer class="footer" id="footer">
         <div>
-            <h2>Контакты</h2>
+            <h2 class="section-title lighten">Онлайн-запись</h2>
+            <form>
+                <input type="submit" class="primary-btn">
+            </form>
+        </div>
+        <div>
+            <h2 class="section-title lighten">Контакты</h2>
             <address>
                 <ul>
                     <li>ул. Васильковая, 7А
@@ -174,20 +181,23 @@
                     <li><a href="mailto:">barbershop@email.com</a> </li>
                 </ul>
             </address>
-            <h4>время работы</h4>
-            <p>Ежедневно с 9:00 до 22:00</p>
-        </div>
-        <div class="bottom-line">
-            &copy; Copyright 2020
-            <ul>
-                <li><a href="">Instagram</a></li>
-                <li>
-                    <a href="">Youtube</a>
-                </li>
-            </ul>
-        </div>
-    </footer>
+            <div class="schedule-box">
+                <h4 class="suptitle-secondary">время работы</h4>
+                <p>Ежедневно с 9:00 до 22:00</p>
+            </div>
 
+        </div>
+
+    </footer>
+    <div class="copyright">
+        <p class="copy-test">&copy; Copyright <span>2020</span> </p>
+        <ul>
+            <li><a href="">Instagram</a></li>
+            <li>
+                <a href="">Youtube</a>
+            </li>
+        </ul>
+    </div>
 </body>
 
 </html>
