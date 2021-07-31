@@ -1,0 +1,24 @@
+:root {
+    --primary-color: #FF6C00;
+    --secondary-color: #191C26;
+    --text-primary: #303030;
+    --text-secondary: #9DA4BD;
+    --color-white: #FFFFFF
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.section-title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.17;
+    letter-spacing: 0.05em;
+    color: var(--text-primary);
+}
+
+.section-title.lighten {
+    color: var(--color-white);
+}
