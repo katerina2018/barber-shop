@@ -3,11 +3,71 @@
     --secondary-color: #191C26;
     --text-primary: #303030;
     --text-secondary: #9DA4BD;
+    --text-primary-lighten: #555555;
     --color-white: #FFFFFF
 }
 
 body {
     font-family: 'Open Sans', sans-serif;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    display: inline-flex;
+}
+
+header {
+    background-color: #303030;
+}
+
+.social-link {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.2em;
+    color: var(--text-primary);
+}
+
+.nav-items {
+    display: flex;
+    background-color: #303030;
+}
+
+.nav-link {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+    color: var(--color-white);
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.social-link:hover,
+.social-link:focus {
+    color: var(--primary-color);
+}
+
+.primary-btn {
+    padding: 11px 19px;
+    border: 1px solid var(--primary-color);
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--color-white);
+}
+
+.primary-btn.darken {
+    color: var(--text-primary);
 }
 
 .section-title {
@@ -21,4 +81,85 @@ body {
 
 .section-title.lighten {
     color: var(--color-white);
+}
+
+.suptitle-primary,
+.suptitle-senondary {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.suptitle-primary {
+    color: var(--text-primary);
+}
+
+.suptitle-senondary {
+    color: rgba(157, 164, 189, 0.6);
+}
+
+.hero-description {
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+    color: var(--text-secondary);
+}
+
+.section-description {
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+    color: var(--text-primary-lighten);
+}
+
+.price-item {
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+    color: var(--text-secondary);
+}
+
+.number-item {
+    width: 170px;
+    height: 132px;
+    background: #F7F7F7;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: var(--text-primary);
+}
+
+.number-item span {
+    font-weight: 700;
+    font-size: 42px;
+}
+
+.number-item p {
+    font-weight: 600;
+    font-size: 11px;
+}
+
+.master-card h4 {
+    font-size: 18px;
+    line-height: 1.39;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: var(--text-primary);
+}
+
+.master-card span {
+    font-size: 14px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: var(--primary-color);
+}
+
+.footer-contacts {
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+    color: var(--text-secondary);
 }
