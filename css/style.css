@@ -19,11 +19,15 @@ ul {
 
 a {
     text-decoration: none;
-    display: inline-flex;
+    display: inline-block;
 }
 
 header {
-    background-color: #303030;
+    /* background-color: #303030; */
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .social-link {
@@ -34,8 +38,30 @@ header {
     color: var(--text-primary);
 }
 
+nav.navbar {
+    width: 100%;
+    padding: 30px 55px 0;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+}
+
+.nav-holder {
+    display: flex;
+    align-items: center;
+    min-height: 56px;
+}
+
+.logo-img {
+    width: 68px;
+    height: 56px;
+    margin: 0 32px;
+}
+
 .nav-items {
     display: flex;
+    margin: 0 40px;
     background-color: #303030;
 }
 
@@ -68,6 +94,17 @@ header {
 
 .primary-btn.darken {
     color: var(--text-primary);
+}
+
+.sidebar {
+    width: 155px;
+    height: 100vh;
+}
+
+.slider {
+    width: calc(100% - 155px);
+    background-image: url(../images/slider-3.jpg);
+    background-repeat: no-repeat;
 }
 
 .section-title {
@@ -107,6 +144,27 @@ header {
     color: var(--text-secondary);
 }
 
+.section-box {
+    width: 100%;
+    padding: 130px 55px;
+}
+
+.about-section,
+.why-us-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-image-box {
+    display: flex;
+    justify-content: space-between;
+    width: 48%;
+}
+
+.description-container {
+    width: 48%;
+}
+
 .section-description {
     font-size: 18px;
     line-height: 1.67;
@@ -114,16 +172,42 @@ header {
     color: var(--text-primary-lighten);
 }
 
+.price-section {
+    background-color: #303030;
+}
+
+.price-box {
+    display: flex;
+    justify-content: space-around;
+}
+
+.price-list {
+    width: 48%;
+}
+
 .price-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
     font-size: 18px;
     line-height: 1.67;
     letter-spacing: 0.02em;
     color: var(--text-secondary);
 }
 
+.number-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 48%;
+    padding: 0 100px;
+}
+
 .number-item {
     width: 170px;
     height: 132px;
+    margin: 30px;
     background: #F7F7F7;
     line-height: 1.36;
     text-align: center;
@@ -141,6 +225,12 @@ header {
     font-size: 11px;
 }
 
+.masters-list {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
 .master-card h4 {
     font-size: 18px;
     line-height: 1.39;
@@ -155,6 +245,11 @@ header {
     text-align: center;
     letter-spacing: 0.02em;
     color: var(--primary-color);
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: space-between;
 }
 
 .footer-contacts {
