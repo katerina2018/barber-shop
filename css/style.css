@@ -57,6 +57,7 @@ nav.navbar {
     width: 68px;
     height: 56px;
     margin: 0 32px;
+    fill: var(--text-primary);
 }
 
 .nav-items {
@@ -103,8 +104,10 @@ nav.navbar {
 
 .slider {
     width: calc(100% - 155px);
-    background-image: url(../images/slider-3.jpg);
+    background-image: linear-gradient(45deg, #00000026, #00000025), url(../images/slider-3.jpg);
     background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .section-title {
@@ -135,6 +138,15 @@ nav.navbar {
 
 .suptitle-senondary {
     color: rgba(157, 164, 189, 0.6);
+}
+
+.suptitle-senondary::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 60px;
+    height: 1px;
+    background-color: rgb(15, 15, 15);
 }
 
 .hero-description {
@@ -173,7 +185,11 @@ nav.navbar {
 }
 
 .price-section {
-    background-color: #303030;
+    background-color: #111319;
+    background-image: url(../images/bg-price.png);
+    background-repeat: no-repeat;
+    position: center;
+    background-size: cover;
 }
 
 .price-box {
@@ -182,7 +198,17 @@ nav.navbar {
 }
 
 .price-list {
-    width: 48%;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.price-list:nth-child(odd) {
+    background-image: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+
+.price-list:nth-child(even) {
+    background-image: linear-gradient(180deg, #090B13 0%, rgba(9, 11, 19, 0.2) 100%);
 }
 
 .price-item {
@@ -190,6 +216,7 @@ nav.navbar {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    padding: 0 40px;
     font-size: 18px;
     line-height: 1.67;
     letter-spacing: 0.02em;
@@ -225,6 +252,10 @@ nav.navbar {
     font-size: 11px;
 }
 
+.master-section {
+    background-color: #F7F7F7;
+}
+
 .masters-list {
     display: flex;
     justify-content: space-between;
@@ -245,6 +276,36 @@ nav.navbar {
     text-align: center;
     letter-spacing: 0.02em;
     color: var(--primary-color);
+}
+
+.master-social-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 90px;
+    margin-top: 10px;
+}
+
+.master-social-link {
+    width: 44px;
+    height: 44px;
+    background-color: var(--color-white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.master-social-link svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--text-primary);
+}
+
+.master-social-link:hover svg,
+.master-social-link:focus svg {
+    fill: var(--primary-color);
 }
 
 .image-gallery {
