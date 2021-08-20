@@ -260,7 +260,15 @@
         <div class="footer-form">
             <h2 class="section-title lighten">Онлайн-запись</h2>
             <form>
-                <input type="submit" class="primary-btn">
+                <label for="userName" class="form-label">
+                    
+                    <input type="text" name="userName" id="userName" class="form-field" required> <legend>Имя*</legend>
+                </label>
+                <label for="userPhone" class="form-label">
+                    
+                <input type="tel" name="userPhone" id="userPhone" class="form-field" required><legend>Телефон*</legend></label>
+                <textarea name="userMessage" class="form-field" id="" cols="30" rows="10" placeholder="Сообщение"></textarea>
+                <button type="submit" class="primary-btn">Отправить</button>
             </form>
         </div>
         <div class="footer-contacts">

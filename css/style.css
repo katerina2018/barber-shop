@@ -103,6 +103,8 @@ nav.navbar {
     letter-spacing: 0.09em;
     text-transform: uppercase;
     color: var(--color-white);
+    background-color: transparent;
+    cursor: pointer;
 }
 
 .primary-btn.darken {
@@ -206,7 +208,8 @@ nav.navbar {
 
 .price-box {
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
+    margin-bottom: 30px;
 }
 
 .price-list {
@@ -323,15 +326,20 @@ nav.navbar {
 .gallery-item {
     position: relative;
     overflow: hidden;
+    width: 20%;
+}
+
+.gallery-item img {
+    width: 100%;
 }
 
 .gallery-description {
     position: absolute;
     bottom: 100%;
     left: 0;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     width: 100%;
     height: 100%;
     padding: 15px;
@@ -347,6 +355,7 @@ nav.navbar {
 .image-gallery {
     display: flex;
     justify-content: space-between;
+    margin-top: 30px;
 }
 
 .footer {
@@ -362,7 +371,63 @@ nav.navbar {
     background-position: right center;
 }
 
-.footer-form,
+.footer-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 50%;
+    height: inherit;
+    padding-right: 50px;
+}
+
+.footer-form .form-field {
+    width: 100%;
+    margin-bottom: 40px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+}
+
+.footer-form .form-label {
+    position: relative;
+    display: inline-block;
+    width: calc(50% - 15px);
+}
+
+.form-label:hover .form-field,
+.footer-form .form-field:focus {
+    border-color: white;
+}
+
+.form-label legend {
+    position: absolute;
+    top: -3px;
+    color: rgb(88, 87, 87);
+    text-transform: uppercase;
+    transition: transform .1s ease;
+}
+
+.form-label:hover legend {
+    color: rgb(255, 255, 255);
+}
+
+textarea.form-field {
+    display: block;
+    width: 100%;
+    resize: none;
+}
+
+textarea.form-field::placeholder {
+    color: white;
+    text-transform: uppercase;
+}
+
+.footer-form .form-field:focus+legend {
+    transform: translate(-2px, -24px);
+    color: white;
+}
+
 .footer-contacts {
     width: 50%;
     height: inherit;
