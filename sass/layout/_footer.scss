@@ -1,0 +1,118 @@
+.footer {
+    display: flex;
+    width: 100%;
+    min-height: 640px;
+    height: auto;
+    background-color: $secondary-color;
+    padding: 0 50px;
+    background-image: url(../images/bg-footer.png);
+    background-repeat: no-repeat;
+    background-size: 50% 100%;
+    background-position: right center;
+}
+
+.footer-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 50%;
+    height: inherit;
+    padding-right: 50px;
+}
+
+.footer-form .form-field {
+    width: 100%;
+    margin-bottom: 40px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+}
+
+.footer-form .form-label {
+    position: relative;
+    display: inline-block;
+    width: calc(50% - 15px);
+}
+
+.form-label:hover .form-field,
+.footer-form .form-field:focus {
+    border-color: white;
+}
+
+.form-label legend {
+    position: absolute;
+    top: -3px;
+    color: rgb(88, 87, 87);
+    text-transform: uppercase;
+    transition: transform .1s ease;
+}
+
+.form-label:hover legend {
+    color: rgb(255, 255, 255);
+}
+
+textarea.form-field {
+    display: block;
+    width: 100%;
+    resize: none;
+}
+
+textarea.form-field::placeholder {
+    color: white;
+    text-transform: uppercase;
+}
+
+.footer-form .form-field:focus+legend {
+    transform: translate(-2px, -24px);
+    color: white;
+}
+
+.footer-contacts {
+    width: 50%;
+    height: inherit;
+}
+
+.footer-contacts {
+    padding: 130px 105px 130px 100px;
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+    color: $text-secondary;
+}
+
+.contacts-box {
+    padding-left: 50px;
+}
+
+.contacts-box-item {
+    position: relative;
+}
+
+.contacts-box-item::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -40px;
+    width: 24px;
+    height: 24px;
+    /* background-color: lavender; */
+    /* background-image: url(../images/icons/map-pin.svg); */
+}
+
+.contacts-box li:nth-of-type(1)::before {
+    background-image: url(../images/icons/map-pin.svg);
+}
+
+.contacts-box li:nth-of-type(2)::before {
+    background-image: url(../images/icons/phone.svg);
+}
+
+.contacts-box li:nth-of-type(3)::before {
+    background-image: url(../images/icons/mail.svg);
+}
+
+.contacts-box a {
+    position: relative;
+    color: $text-secondary;
+}

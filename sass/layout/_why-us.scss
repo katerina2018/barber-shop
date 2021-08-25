@@ -1,0 +1,33 @@
+.why-us-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.number-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 48%;
+    padding: 0 100px;
+}
+
+.number-item {
+    width: 170px;
+    height: 132px;
+    margin: 30px;
+    background: #F7F7F7;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: $text-primary;
+}
+
+.number-item span {
+    font-weight: 700;
+    font-size: 42px;
+}
+
+.number-item p {
+    font-weight: 600;
+    font-size: 11px;
+}

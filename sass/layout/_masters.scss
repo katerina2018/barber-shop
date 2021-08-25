@@ -1,0 +1,55 @@
+.master-section {
+    background-color: #F7F7F7;
+}
+
+.masters-list {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.master-card h4 {
+    font-size: 18px;
+    line-height: 1.39;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: $text-primary;
+}
+
+.master-card span {
+    font-size: 14px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: $primary-color;
+}
+
+.master-social-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 90px;
+    margin-top: 10px;
+}
+
+.master-social-link {
+    width: 44px;
+    height: 44px;
+    background-color: $color-white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.master-social-link svg {
+    width: 20px;
+    height: 20px;
+    fill: $text-primary;
+}
+
+.master-social-link:hover svg,
+.master-social-link:focus svg {
+    fill: $primary-color;
+}

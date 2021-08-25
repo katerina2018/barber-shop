@@ -1,0 +1,117 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes infiniteRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+// .container {
+//     margin: 0 auto;
+//     padding: 0 15px;
+//     @media screen and (max-width: $tablet) {
+//         max-width: $mobile;
+//     }
+//     @media screen and (min-width: $tablet) and (max-width: $desktop),
+//     (orientation: landscape) {
+//         max-width: $tablet;
+//     }
+//     @media screen and (min-width: $desktop) {
+//         max-width: $desktop;
+//     }
+// }
+// .container--flex {
+//     @include centeredFlex();
+// }
+// .container--mobile-menu {
+//     @media screen and (max-width: $tablet - 1px) {
+//         min-height: 60px;
+//         justify-content: space-between;
+//         flex-direction: row-reverse;
+//     }
+// }
+.section-box {
+    width: 100%;
+    padding: 130px 55px;
+}
+
+.description-container {
+    width: 48%;
+}
+
+.section-description {
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+    color: $text-primary-lighten;
+}
+
+.section-title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.17;
+    letter-spacing: 0.05em;
+    color: $text-primary;
+}
+
+.section-title.lighten {
+    color: $color-white;
+}
+
+.suptitle-primary,
+.suptitle-senondary {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.suptitle-primary {
+    color: $text-primary;
+}
+
+.suptitle-senondary {
+    color: rgba(157, 164, 189, 0.6);
+}
+
+.suptitle-senondary::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 60px;
+    height: 1px;
+    background-color: rgb(15, 15, 15);
+}
