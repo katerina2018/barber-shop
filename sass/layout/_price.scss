@@ -10,6 +10,10 @@
     display: flex;
     /* justify-content: space-around; */
     margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+    color: $text-secondary;
 }
 
 .price-list {
@@ -32,6 +36,7 @@
     align-items: center;
     width: 100%;
     padding: 0 40px;
+    margin-top: 20px;
     font-size: 18px;
     line-height: 1.67;
     letter-spacing: 0.02em;

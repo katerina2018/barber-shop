@@ -339,32 +339,16 @@ ul {
   padding: 130px 0;
 }
 
-.description-container {
-  width: 48%;
+.section-box--about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.section-description {
-  font-size: 18px;
-  line-height: 1.67;
-  letter-spacing: 0.02em;
-  color: #555555;
-}
-
-.section-title {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 42px;
-  line-height: 1.17;
-  letter-spacing: 0.05em;
-  color: #303030;
-}
-
-.section-title.lighten {
-  color: #FFFFFF;
-}
-
-.suptitle-primary,
-.suptitle-senondary {
+.section-suptitle {
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
@@ -372,15 +356,7 @@ ul {
   text-transform: uppercase;
 }
 
-.suptitle-primary {
-  color: #303030;
-}
-
-.suptitle-senondary {
-  color: rgba(157, 164, 189, 0.6);
-}
-
-.suptitle-senondary::before {
+.section-suptitle::before {
   content: "";
   display: inline-block;
   margin-right: 20px;
@@ -390,7 +366,46 @@ ul {
   background-color: rgba(157, 164, 189, 0.6);
 }
 
+.section-suptitle--primary {
+  color: #303030;
+}
+
+.section-suptitle--senondary {
+  color: rgba(157, 164, 189, 0.6);
+}
+
+.section-title {
+  margin: 20px 0;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+  color: #303030;
+}
+
+.section-title--lighten {
+  color: #FFFFFF;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #555555;
+}
+
+.section-description {
+  margin: 20px 0 40px;
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+  color: #555555;
+}
+
 .primary-btn {
+  min-width: 160px;
+  display: inline-block;
   padding: 11px 19px;
   border: 1px solid #FF6C00;
   border-radius: 25px;
@@ -404,7 +419,7 @@ ul {
   cursor: pointer;
 }
 
-.primary-btn.darken {
+.primary-btn--darken {
   color: #303030;
 }
 
@@ -567,15 +582,6 @@ ul {
   color: #9DA4BD;
 }
 
-.about-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
 .about-image-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -583,7 +589,11 @@ ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 48%;
+  width: calc(50% - 15px);
+}
+
+.description-container {
+  width: calc(50% - 15px);
 }
 
 .price-section {
@@ -600,6 +610,10 @@ ul {
   display: flex;
   /* justify-content: space-around; */
   margin-bottom: 30px;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9DA4BD;
 }
 
 .price-list {
@@ -633,6 +647,7 @@ ul {
           align-items: center;
   width: 100%;
   padding: 0 40px;
+  margin-top: 20px;
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;

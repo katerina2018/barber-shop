@@ -81,45 +81,17 @@ ul {
     padding: 130px 0;
 }
 
-.description-container {
-    width: 48%;
+.section-box--about {
+    display: flex;
+    justify-content: space-between;
 }
 
-.section-description {
-    font-size: 18px;
-    line-height: 1.67;
-    letter-spacing: 0.02em;
-    color: $text-primary-lighten;
-}
-
-.section-title {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-    font-size: 42px;
-    line-height: 1.17;
-    letter-spacing: 0.05em;
-    color: $text-primary;
-}
-
-.section-title.lighten {
-    color: $color-white;
-}
-
-.suptitle-primary,
-.suptitle-senondary {
+.section-suptitle {
     font-weight: 600;
     font-size: 11px;
     line-height: 1.36;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-}
-
-.suptitle-primary {
-    color: $text-primary;
-}
-
-.suptitle-senondary {
-    color: $color-suptitle;
     &::before {
         content: "";
         display: inline-block;
@@ -131,7 +103,46 @@ ul {
     }
 }
 
+.section-suptitle--primary {
+    color: $text-primary;
+}
+
+.section-suptitle--senondary {
+    color: $color-suptitle;
+}
+
+.section-title {
+    margin: 20px 0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.17;
+    letter-spacing: 0.05em;
+    color: $text-primary;
+}
+
+.section-title--lighten {
+    color: $color-white;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+    color: $text-primary-lighten;
+}
+
+.section-description {
+    margin: 20px 0 40px;
+    font-size: 14px;
+    line-height: 1.86;
+    letter-spacing: 0.02em;
+    color: $text-primary-lighten;
+}
+
 .primary-btn {
+    min-width: 160px;
+    display: inline-block;
     padding: 11px 19px;
     border: 1px solid $primary-color;
     border-radius: 25px;
@@ -145,6 +156,6 @@ ul {
     cursor: pointer;
 }
 
-.primary-btn.darken {
+.primary-btn--darken {
     color: $text-primary;
 }

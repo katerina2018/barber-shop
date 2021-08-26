@@ -1,10 +1,9 @@
-.about-section {
-    display: flex;
-    justify-content: space-between;
-}
-
 .about-image-box {
     display: flex;
     justify-content: space-between;
-    width: 48%;
+    width: calc(50% - 15px);
+}
+
+.description-container {
+    width: calc(50% - 15px);
 }
