@@ -40,7 +40,8 @@ ul {
 .container {
     margin: 0 auto;
     padding: 0 15px;
-    border: 1px solid rgb(59, 85, 230);
+    outline: 1px solid #333;
+    // border: 1px solid rgb(59, 85, 230);
     // @media screen and (max-width: $tablet) {
     //     max-width: $mobile;
     // }
@@ -54,15 +55,13 @@ ul {
 }
 
 .container--navbar {
-    padding: 32px 15px;
+    padding: 10px 15px;
     display: flex;
     justify-content: space-between;
-    background-image: linear-gradient(to right, #fff 10%, #303030 10%);
 }
 
 .container--hero {
     display: flex;
-    // justify-content: space-between;
     align-items: flex-end;
     height: 100vh;
 }
@@ -79,7 +78,7 @@ ul {
 // }
 .section-box {
     width: 100%;
-    padding: 130px 55px;
+    padding: 130px 0;
 }
 
 .description-container {
@@ -120,16 +119,16 @@ ul {
 }
 
 .suptitle-senondary {
-    color: rgba(157, 164, 189, 0.6);
-}
-
-.suptitle-senondary::before {
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    width: 60px;
-    height: 1px;
-    background-color: rgb(15, 15, 15);
+    color: $color-suptitle;
+    &::before {
+        content: "";
+        display: inline-block;
+        margin-right: 20px;
+        vertical-align: middle;
+        width: 60px;
+        height: 1px;
+        background-color: $color-suptitle;
+    }
 }
 
 .primary-btn {

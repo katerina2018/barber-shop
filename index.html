@@ -10,16 +10,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.min.css">
     <title>BarberShop</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 
-<body>
-    <header>
-        <nav class=" navbar">
+
+<body data-spy="scroll" data-target="#main-nav" data-offset="60">
+
+
+
+    <header id="top">
+
+        <nav id="main-nav" class="navbar navbar-default">
+
             <div class="container container--navbar">
                 <div class="nav-holder">
-                    <svg class="logo-img">
+                    <a id="logoimg" class="navbar-brand scroll" href="#top"> <svg class="logoimg">
                     <use href="./images/sprite.svg#icon-logo"></use>
-                </svg>
+                </svg></a>
                     <ul class="nav-items">
                         <li class="nav-item"><a href="#about-section" class="nav-link">О нас</a> </li>
                         <li class="nav-item"><a href="#price-section" class="nav-link">Услуги и цены</a> </li>
@@ -54,26 +61,28 @@
                 <div class="slide">
                     <span lang="en" class="suptitle-senondary">A hair salon for men in Kyiv</span>
                     <h1 class="hero-title">BarberShop</h1>
-                    <p class="hero-description">Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и со вкусом.</p>
+                    <p class="hero-description">Мы эксперты в модных мужских стрижках. <br> Работаем быстро, осторожно и со вкусом.</p>
                 </div>
             </div>
         </div>
     </header>
     <main>
-        <section class="section-box about-section" id="about-section">
-            <div class="about-image-box">
-                <img src="./images/about-us-1.jpg" alt="" width="270">
-                <img src="./images/about-us-2.jpg" alt="" width="270">
-            </div>
-            <div class="description-container">
-                <span class="suptitle-primary">О НАС</span>
-                <h2 class="section-title">Лучший Барбершоп твоего города</h2>
-                <h3 class="section-sub-title">Если ты хочешь добавить в свой образ больше уверенности – тебе точно к нам.</h3>
-                <p class="section-description">Мы команда, которая никогда не останавливается на достигнутом и жаждет перемен. И когда ты попадешь в руки нашего мастера, то уже никогда не сможешь быть прежним. Мы команда, которая всегда с клиентами "на одной волне". Поэтому, мы всегда
-                    готовы усовершенствовать каждого, кто к нам приходит!</p>
-                <a href="#footer" class="primary-btn darken">онлайн-запись</a>
-            </div>
-        </section>
+        <div class="container">
+            <section class="section-box about-section" id="about-section">
+                <div class="about-image-box">
+                    <img src="./images/about-us-1.jpg" alt="" width="270">
+                    <img src="./images/about-us-2.jpg" alt="" width="270">
+                </div>
+                <div class="description-container">
+                    <span class="suptitle-primary">О НАС</span>
+                    <h2 class="section-title">Лучший Барбершоп твоего города</h2>
+                    <h3 class="section-sub-title">Если ты хочешь добавить в свой образ больше уверенности – тебе точно к нам.</h3>
+                    <p class="section-description">Мы команда, которая никогда не останавливается на достигнутом и жаждет перемен. И когда ты попадешь в руки нашего мастера, то уже никогда не сможешь быть прежним. Мы команда, которая всегда с клиентами "на одной волне". Поэтому, мы
+                        всегда готовы усовершенствовать каждого, кто к нам приходит!</p>
+                    <a href="#footer" class="primary-btn darken">онлайн-запись</a>
+                </div>
+            </section>
+        </div>
         <section class="section-box price-section" id="price-section">
             <span class="suptitle-senondary">Проведи время в компании лучших мастеров</span>
             <h2 class="section-title lighten">Услуги и цены</h2>
@@ -299,7 +308,34 @@
                 <a href="">Youtube</a>
             </li>
         </ul>
-    </div> -->
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            var $body = $('body');
+            var $navbar = $('.navbar-default');
+            var $offsetY = $navbar.offset().top + 10;
+
+
+            var $scrollButton = $('.scroll');
+
+            // Fixed Nav after scroll
+            function scroll() {
+                if ($(window).scrollTop() >= $offsetY) {
+                    $('.navbar').addClass('menu-fixed');
+                    $('#logoimg').addClass('menu-fixed-logo');
+                } else {
+                    $('.navbar').removeClass('menu-fixed');
+                    $('#logoimg').removeClass('menu-fixed-logo');
+                }
+            }
+            document.onscroll = scroll;
+
+
+
+
+        });
+    </script>
 </body>
 
 </html>
