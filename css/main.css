@@ -312,12 +312,6 @@ ul {
   padding: 0 15px;
   border: 1px solid #3b55e6;
   width: 1200px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .container--navbar {
@@ -330,6 +324,16 @@ ul {
           justify-content: space-between;
   background-image: -webkit-gradient(linear, left top, right top, color-stop(10%, #fff), color-stop(10%, #303030));
   background-image: linear-gradient(to right, #fff 10%, #303030 10%);
+}
+
+.container--hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 100vh;
 }
 
 .section-box {
@@ -385,6 +389,24 @@ ul {
   width: 60px;
   height: 1px;
   background-color: #0f0f0f;
+}
+
+.primary-btn {
+  padding: 11px 19px;
+  border: 1px solid #FF6C00;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.primary-btn.darken {
+  color: #303030;
 }
 
 header {
@@ -467,38 +489,47 @@ header {
   color: #FFFFFF;
 }
 
-.primary-btn {
-  padding: 11px 19px;
-  border: 1px solid #FF6C00;
-  border-radius: 25px;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  background-color: transparent;
-  cursor: pointer;
-}
-
-.primary-btn.darken {
-  color: #303030;
-}
-
 .sidebar {
-  -webkit-transform-origin: bottom left;
-          transform-origin: bottom left;
+  width: 100px;
+  height: 0;
 }
 
 .sidebar > ul {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  border: 1px solid #333;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.sidebar li:not(:last-child) {
+  margin-right: 40px;
+}
+
+.social-link {
+  padding: 42px 0;
 }
 
 .slider {
+  height: 100%;
   width: calc(100% - 100px);
-  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 100px;
   background-image: linear-gradient(45deg, #00000026, #00000025), url(../images/slider-3.jpg);
   background-repeat: no-repeat;
   background-size: cover;

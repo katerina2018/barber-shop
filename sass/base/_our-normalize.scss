@@ -50,8 +50,6 @@ ul {
     // }
     // @media screen and (min-width: $desktop) {
     width: $desktop;
-    display: flex;
-    justify-content: space-between;
     // }
 }
 
@@ -60,6 +58,13 @@ ul {
     display: flex;
     justify-content: space-between;
     background-image: linear-gradient(to right, #fff 10%, #303030 10%);
+}
+
+.container--hero {
+    display: flex;
+    // justify-content: space-between;
+    align-items: flex-end;
+    height: 100vh;
 }
 
 // .container--flex {
@@ -125,4 +130,22 @@ ul {
     width: 60px;
     height: 1px;
     background-color: rgb(15, 15, 15);
+}
+
+.primary-btn {
+    padding: 11px 19px;
+    border: 1px solid $primary-color;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: $color-white;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.primary-btn.darken {
+    color: $text-primary;
 }
