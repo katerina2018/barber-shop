@@ -7,27 +7,46 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 48%;
+    // width: 48%;
     padding: 0 100px;
 }
 
 .number-item {
     width: 170px;
-    height: 132px;
-    margin: 30px;
+    height: 133px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
     background: #F7F7F7;
     line-height: 1.36;
     text-align: center;
     letter-spacing: 0.05em;
     color: $text-primary;
+    &:nth-child(2n) {
+        margin-top: 30px;
+    }
 }
 
 .number-item span {
+    padding-bottom: 6px;
     font-weight: 700;
     font-size: 42px;
+    position: relative;
+    &::after {
+        content: "+";
+        color: #FF6C00;
+        position: absolute;
+        top: 0;
+        right: -15px;
+        font-weight: 600;
+        font-size: 16px;
+    }
 }
 
 .number-item p {
     font-weight: 600;
     font-size: 11px;
+    letter-spacing: 0.01em;
 }

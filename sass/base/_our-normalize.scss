@@ -54,6 +54,12 @@ ul {
     // }
 }
 
+.container--flex {
+    display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+}
+
 .container--navbar {
     padding: 10px 15px;
     display: flex;
