@@ -280,24 +280,28 @@
             </div>
         </section>
     </main>
-    <footer class="footer" id="footer">
-        <div class="footer-form">
-            <h2 class="section-title lighten">Онлайн-запись</h2>
-            <form>
-                <label for="userName" class="form-label">
+    <footer class=" section-box footer" id="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer-form">
+                    <h2 class="section-title section-title--lighten">Онлайн-запись</h2>
+                    <form>
+                        <label for="userName" class="form-label">
                     
-                    <input type="text" name="userName" id="userName" class="form-field" required> <legend>Имя*</legend>
+                    <input type="text" name="userName" id="userName" class="form-field" 
+                    placeholder=" "required> <legend>Имя*</legend>
                 </label>
-                <label for="userPhone" class="form-label">
+                        <label for="userPhone" class="form-label">
                     
-                <input type="tel" name="userPhone" id="userPhone" class="form-field" required><legend>Телефон*</legend></label>
-                <textarea name="userMessage" class="form-field" id="" cols="30" rows="10" placeholder="Сообщение"></textarea>
-                <button type="submit" class="primary-btn">Отправить</button>
-            </form>
-        </div>
-        <div class="footer-contacts">
-            <h2 class="section-title lighten">Контакты</h2>
-            <address>
+                <input type="tel" name="userPhone" id="userPhone" class="form-field" 
+                placeholder=" "required><legend>Телефон*</legend></label>
+                        <textarea name="userMessage" class="form-field" id="" cols="30" rows="10" placeholder="Сообщение"></textarea>
+                        <button type="submit" class="primary-btn">Отправить</button>
+                    </form>
+                </div>
+                <div class="footer-contacts">
+                    <h2 class="section-title section-title--lighten">Контакты</h2>
+                    <address>
                 <ul class="contacts-box">
                     <li class="contacts-box-item"  class="address">ул. Васильковая, 7А <br>
                         Киев, 08132</li>
@@ -305,24 +309,28 @@
                     <li class="contacts-box-item" ><a href="mailto:">barbershop@email.com</a> </li>
                 </ul>
             </address>
-            <div class="schedule-box">
-                <h4 class="suptitle-secondary">время работы</h4>
-                <p>Ежедневно с 9:00 до 22:00</p>
+                    <div class="schedule-box">
+                        <h4 class="section-suptitle section-suptitle--secondary">время работы</h4>
+                        <p>Ежедневно с 9:00 до 22:00</p>
+                    </div>
+
+                </div>
             </div>
-
         </div>
-
     </footer>
     <div class="copyright">
-        <p class="copy-test">&copy; Copyright <span>2020</span> </p>
-        <ul>
-            <li><a href="">Instagram</a></li>
-            <li>
-                <a href="">Youtube</a>
-            </li>
-        </ul>
+        <div class="container">
+            <div class="copyright-content">
+                <p class="copy-test">&copy; Copyright <span>2020</span> </p>
+                <ul class="social">
+                    <li class="social__item"><a href="" class="social__link">Instagram</a></li>
+                    <li class="social__item">
+                        <a href="" class="social__link">Youtube</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
-
     <script>
         $(document).ready(function() {
             var $body = $('body');

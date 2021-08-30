@@ -310,7 +310,6 @@ ul {
 .container {
   margin: 0 auto;
   padding: 0 15px;
-  outline: 1px solid #333;
   width: 1200px;
 }
 
@@ -863,18 +862,17 @@ ul {
 }
 
 .footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  min-height: 640px;
-  height: auto;
   background-color: #191C26;
-  padding: 0 50px;
   background-image: url(../images/bg-footer.png);
   background-repeat: no-repeat;
   background-size: 50% 100%;
   background-position: right center;
+}
+
+.footer__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .footer-form {
@@ -889,6 +887,10 @@ ul {
   width: 50%;
   height: inherit;
   padding-right: 50px;
+}
+
+.footer-form form {
+  margin-top: 40px;
 }
 
 .footer-form .form-field {
@@ -911,6 +913,10 @@ ul {
   border-color: white;
 }
 
+.footer-form .form-field:focus {
+  background-color: #fff;
+}
+
 .form-label legend {
   position: absolute;
   top: -3px;
@@ -926,36 +932,65 @@ ul {
   color: white;
 }
 
+.footer-form .form-field:focus + legend,
+.footer-form .form-field:not(:placeholder-shown) + legend {
+  -webkit-transform: translate(-2px, -24px);
+          transform: translate(-2px, -24px);
+  color: white;
+}
+
+.footer-form .form-field:not(:placeholder-shown) {
+  background-color: #fff;
+}
+
 textarea.form-field {
   display: block;
   width: 100%;
   resize: none;
 }
 
+textarea.form-field:focus {
+  background-color: #fff;
+}
+
 textarea.form-field::-webkit-input-placeholder {
-  color: white;
+  color: #9da4bd66;
   text-transform: uppercase;
 }
 
 textarea.form-field:-ms-input-placeholder {
-  color: white;
+  color: #9da4bd66;
   text-transform: uppercase;
 }
 
 textarea.form-field::-ms-input-placeholder {
-  color: white;
+  color: #9da4bd66;
   text-transform: uppercase;
 }
 
 textarea.form-field::placeholder {
-  color: white;
+  color: #9da4bd66;
   text-transform: uppercase;
 }
 
-.footer-form .form-field:focus + legend {
-  -webkit-transform: translate(-2px, -24px);
-          transform: translate(-2px, -24px);
-  color: white;
+textarea.form-field:focus::-webkit-input-placeholder {
+  color: #000;
+}
+
+textarea.form-field:focus:-ms-input-placeholder {
+  color: #000;
+}
+
+textarea.form-field:focus::-ms-input-placeholder {
+  color: #000;
+}
+
+textarea.form-field:focus::placeholder {
+  color: #000;
+}
+
+textarea.form-field:not(:placeholder-shown) {
+  background-color: #fff;
 }
 
 .footer-contacts {
@@ -964,7 +999,14 @@ textarea.form-field::placeholder {
 }
 
 .footer-contacts {
-  padding: 130px 105px 130px 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 100px;
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
@@ -977,6 +1019,7 @@ textarea.form-field::placeholder {
 
 .contacts-box-item {
   position: relative;
+  margin-bottom: 20px;
 }
 
 .contacts-box-item::before {
@@ -1007,7 +1050,15 @@ textarea.form-field::placeholder {
   color: #9DA4BD;
 }
 
-.copyright {
+.schedule-box {
+  margin-top: auto;
+}
+
+.schedule-box p {
+  margin-top: 20px;
+}
+
+.copyright-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1017,9 +1068,43 @@ textarea.form-field::placeholder {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
   min-height: 125px;
   height: auto;
-  padding: 0 50px;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: #9DA4BD;
+}
+
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social::before {
+  content: "";
+  display: inline-block;
+  margin: 48px 40px;
+  width: 60px;
+  height: 1px;
+  background-color: #303030;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.social__link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: #303030;
+  padding: 20px 0;
 }
 /*# sourceMappingURL=main.css.map */

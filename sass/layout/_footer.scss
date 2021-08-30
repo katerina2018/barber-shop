@@ -1,14 +1,13 @@
 .footer {
-    display: flex;
-    width: 100%;
-    min-height: 640px;
-    height: auto;
     background-color: $secondary-color;
-    padding: 0 50px;
     background-image: url(../images/bg-footer.png);
     background-repeat: no-repeat;
     background-size: 50% 100%;
     background-position: right center;
+}
+
+.footer__content {
+    display: flex;
 }
 
 .footer-form {
@@ -18,6 +17,10 @@
     width: 50%;
     height: inherit;
     padding-right: 50px;
+}
+
+.footer-form form {
+    margin-top: 40px;
 }
 
 .footer-form .form-field {
@@ -40,6 +43,10 @@
     border-color: white;
 }
 
+.footer-form .form-field:focus {
+    background-color: #fff;
+}
+
 .form-label legend {
     position: absolute;
     top: -3px;
@@ -52,20 +59,37 @@
     color: rgb(255, 255, 255);
 }
 
+.footer-form .form-field:focus+legend,
+.footer-form .form-field:not(:placeholder-shown)+legend {
+    transform: translate(-2px, -24px);
+    color: white;
+}
+
+.footer-form .form-field:not(:placeholder-shown) {
+    background-color: #fff;
+}
+
 textarea.form-field {
     display: block;
     width: 100%;
     resize: none;
+    &:focus {
+        background-color: #fff;
+    }
 }
 
 textarea.form-field::placeholder {
-    color: white;
+    color: #9da4bd66;
+    ;
     text-transform: uppercase;
 }
 
-.footer-form .form-field:focus+legend {
-    transform: translate(-2px, -24px);
-    color: white;
+textarea.form-field:focus::placeholder {
+    color: #000;
+}
+
+textarea.form-field:not(:placeholder-shown) {
+    background-color: #fff;
 }
 
 .footer-contacts {
@@ -74,7 +98,9 @@ textarea.form-field::placeholder {
 }
 
 .footer-contacts {
-    padding: 130px 105px 130px 100px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 100px;
     font-size: 18px;
     line-height: 1.67;
     letter-spacing: 0.02em;
@@ -87,6 +113,7 @@ textarea.form-field::placeholder {
 
 .contacts-box-item {
     position: relative;
+    margin-bottom: 20px;
 }
 
 .contacts-box-item::before {
@@ -115,4 +142,12 @@ textarea.form-field::placeholder {
 .contacts-box a {
     position: relative;
     color: $text-secondary;
+}
+
+.schedule-box {
+    margin-top: auto;
+}
+
+.schedule-box p {
+    margin-top: 20px;
 }
