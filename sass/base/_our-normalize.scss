@@ -66,6 +66,10 @@ ul {
     height: 100vh;
 }
 
+.description-container {
+    width: calc(50% - 15px);
+}
+
 // .container--flex {
 //     @include centeredFlex();
 // }
@@ -125,6 +129,10 @@ ul {
     color: $color-white;
 }
 
+.section-title--price {
+    margin-bottom: 44px;
+}
+
 .section-subtitle {
     font-size: 18px;
     line-height: 1.67;
@@ -138,6 +146,11 @@ ul {
     line-height: 1.86;
     letter-spacing: 0.02em;
     color: $text-primary-lighten;
+}
+
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
 }
 
 .primary-btn {
