@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="./css/main.min.css">
     <title>BarberShop</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
 </head>
 
 
@@ -28,12 +30,12 @@
                     <use href="./images/sprite.svg#icon-logo"></use>
                 </svg></a>
                     <ul class="nav-items">
-                        <li class="nav-item"><a href="#about-section" class="nav-link">О нас</a> </li>
-                        <li class="nav-item"><a href="#price-section" class="nav-link">Услуги и цены</a> </li>
-                        <li class="nav-item"><a href="#masters-section" class="nav-link">Мастера</a> </li>
+                        <li class="nav-item active"><a href="#about-section" class="nav-link scroll active">О нас</a> </li>
+                        <li class="nav-item"><a href="#price-section" class="nav-link scroll">Услуги и цены</a> </li>
+                        <li class="nav-item"><a href="#masters-section" class="nav-link scroll">Мастера</a> </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">
-                                <!-- href="#footer" -->Контакты</a>
+                            <a href="#footer" class="nav-link scroll">
+                                Контакты</a>
                         </li>
                     </ul>
                 </div>
@@ -331,32 +333,9 @@
             </div>
         </div>
     </div>
-    <script>
-        $(document).ready(function() {
-            var $body = $('body');
-            var $navbar = $('.navbar-default');
-            var $offsetY = $navbar.offset().top + 10;
 
 
-            var $scrollButton = $('.scroll');
-
-            // Fixed Nav after scroll
-            function scroll() {
-                if ($(window).scrollTop() >= $offsetY) {
-                    $('.navbar').addClass('menu-fixed');
-                    $('#logoimg').addClass('menu-fixed-logo');
-                } else {
-                    $('.navbar').removeClass('menu-fixed');
-                    $('#logoimg').removeClass('menu-fixed-logo');
-                }
-            }
-            document.onscroll = scroll;
-
-
-
-
-        });
-    </script>
+    <script src="./js/scroll.js"></script>
 </body>
 
 </html>
