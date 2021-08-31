@@ -505,7 +505,7 @@ ul {
   color: #FFFFFF;
 }
 
-.nav-link:hover, .nav-link:focus {
+.nav-link:hover {
   color: #FF6C00;
 }
 

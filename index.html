@@ -8,10 +8,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/main.min.css">
+
     <title>BarberShop</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
+
+    <link rel="stylesheet" href="./css/main.min.css">
 
 </head>
 
@@ -21,8 +24,8 @@
 
 
     <header id="top">
-
-        <nav id="main-nav" class="navbar navbar-default">
+        <!-- main-nav- start -->
+        <!-- <nav id="main-nav" class="navbar navbar-default">
 
             <div class="container container--navbar">
                 <div class="nav-holder">
@@ -30,7 +33,7 @@
                     <use href="./images/sprite.svg#icon-logo"></use>
                 </svg></a>
                     <ul class="nav-items">
-                        <li class="nav-item active"><a href="#about-section" class="nav-link scroll active">О нас</a> </li>
+                        <li class="nav-item "><a href="#about-section" class="nav-link scroll ">О нас</a> </li>
                         <li class="nav-item"><a href="#price-section" class="nav-link scroll">Услуги и цены</a> </li>
                         <li class="nav-item"><a href="#masters-section" class="nav-link scroll">Мастера</a> </li>
                         <li class="nav-item">
@@ -42,23 +45,22 @@
 
                 <div class="btn-box">
                     <a href="tel:+" class="phone-link">+38 044 111 11 11</a>
-                    <a href="" class="primary-btn ">
-                        <!-- href="#footer" -->
+                    <a href="#footer" class="primary-btn ">
                         онлайн-запись</a>
                 </div>
             </div>
-        </nav>
-        <div class="container container--hero">
+        </nav> -->
+        <!-- main-nav- start -->
 
-            <aside class="sidebar">
+        <!-- <div class="container container--hero">
 
+            <aside class="sidebar wow animate__animated animate__fadeInLeft">
                 <ul>
                     <li><a href="" class="social-link">Instagram</a></li>
                     <li> <a href="" class="social-link">Youtube</a></li>
                 </ul>
-
-
             </aside>
+
             <div class="slider">
                 <div class="slide">
                     <span lang="en" class="section-suptitle section-suptitle--senondary">A hair salon for men in Kyiv</span>
@@ -66,10 +68,10 @@
                     <p class="hero-description">Мы эксперты в модных мужских стрижках. <br> Работаем быстро, осторожно и со вкусом.</p>
                 </div>
             </div>
-        </div>
+        </div> -->
     </header>
     <main>
-        <div class="container">
+        <div class="container container-js">
             <section class="section-box section-box--about" id="about-section">
                 <div class="about-image-box">
                     <img src="./images/about-us-1.jpg" alt="" width="270">
@@ -85,7 +87,7 @@
                 </div>
             </section>
         </div>
-        <section class="section-box price-section" id="price-section">
+        <!-- <section class=" container-js section-box price-section" id="price-section">
             <div class="container">
                 <span class="section-suptitle section-suptitle--senondary">Проведи время в компании лучших мастеров</span>
                 <h2 class="section-title section-title--lighten section-title--price">Услуги и цены</h2>
@@ -114,8 +116,8 @@
                 <div class="btn-wrapper"> <a href="#footer" class="primary-btn">онлайн-запись</a></div>
 
             </div>
-        </section>
-        <section class="section-box why-us-section">
+        </section> -->
+        <!-- <section class="section-box why-us-section">
             <div class="container container--flex">
                 <div class="description-container">
                     <ul class="number-list">
@@ -139,15 +141,15 @@
                     <h3 class="section-subtitle">О нас говорят только хорошее. Но лучше 1 раз <br> увидеть и прочувствовать, чем 10 раз прочитать. </h3>
                 </div>
             </div>
-        </section>
-
-        <section class="section-box master-section" id="masters-section">
+        </section> -->
+        <!-- 
+        <section class=" container-js section-box master-section" id="masters-section">
             <div class="container">
 
                 <span class="section-suptitle suptitle-primary">для настоящих ценителей атмосферы</span>
                 <h2 class="section-title">Наши мастера</h2>
                 <ul class="masters-list">
-                    <li class="master-card">
+                    <li class="wow animate__animated animate__fadeInLeft master-card">
                         <img src="./images/john-smith.jpg" alt="" width="370">
                         <h4>John Smith</h4>
                         <span>Extreme Barber</span>
@@ -183,7 +185,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="master-card">
+                    <li data-wow-delay='.5s' class="wow animate__animated animate__fadeInLeft master-card">
                         <img src="./images/michele-doe.jpg" alt="" width="370">
                         <h4>Michele Doe</h4>
                         <span>Extreme Barber</span>
@@ -218,7 +220,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="master-card">
+                    <li data-wow-delay='1s' class="wow animate__animated animate__fadeInLeft master-card">
                         <img src="./images/alan-black.jpg" alt="" width="370">
                         <h4>Alan Black</h4>
                         <span>Extreme Barber</span>
@@ -255,9 +257,9 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        </section> -->
         <!-- section image-gallery start -->
-        <section class="section-box">
+        <!-- <section class="section-box">
             <div class="container ">
 
                 <span class="section-suptitle section-suptitle--primary">На латинском языке “барба” означает “борода”</span>
@@ -280,9 +282,9 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        </section> -->
     </main>
-    <footer class=" section-box footer" id="footer">
+    <!-- <footer class="container-js section-box footer" id="footer">
         <div class="container">
             <div class="footer__content">
                 <div class="footer-form">
@@ -319,8 +321,8 @@
                 </div>
             </div>
         </div>
-    </footer>
-    <div class="copyright">
+    </footer> -->
+    <!-- <div class="copyright">
         <div class="container">
             <div class="copyright-content">
                 <p class="copy-test">&copy; Copyright <span>2020</span> </p>
@@ -332,10 +334,14 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
     <script src="./js/scroll.js"></script>
+    <script src="./js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 </body>
 
 </html>

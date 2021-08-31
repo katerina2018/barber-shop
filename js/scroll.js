@@ -1,14 +1,26 @@
-window.addEventListener
+window.addEventListener('scroll', () => {
+    let scrollDistance = window.scrollY;
+    // console.log(scrollDistance);
+
+    document.querySelectorAll('.container-js').forEach((el, i) => {
+
+        if (el.offsetTop - document.querySelector('.nav-items').clientHeight <= scrollDistance) {
+            document.querySelectorAll('.nav-items a').forEach((el) => {
+                if (el.classList.contains('active')) {
+                    el.classList.remove('active');
+                }
+            });
+            document.querySelectorAll('.nav-items li')[i].querySelector('a').classList.add('active');
+        }
+    });
+});
 
 
 // scroll menu
 
 $(document).ready(function() {
-    var $body = $('body');
     var $navbar = $('.navbar-default');
     var $offsetY = $navbar.offset().top + 10;
-
-
     var $scrollButton = $('.scroll');
 
     // Fixed Nav after scroll
@@ -30,6 +42,6 @@ $scrollButton.on('click', function(e) {
     e.preventDefault();
     var $link = $(this).attr('href');
     $('html, body').animate({
-        scrollTop: $($link).offset().top - 60
+        scrollTop: $($link).offset().top - 20
     }, 900);
 });

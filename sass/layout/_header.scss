@@ -53,8 +53,7 @@
     line-height: 1.33;
     letter-spacing: 0.1em;
     color: $color-white;
-    &:hover,
-    &:focus {
+    &:hover {
         color: $primary-color;
     }
 }
