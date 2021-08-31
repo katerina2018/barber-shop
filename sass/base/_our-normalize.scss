@@ -39,21 +39,28 @@ ul {
 
 .container {
     margin: 0 auto;
-    padding: 0 15px;
-    // outline: 1px solid #333;
-    // border: 1px solid rgb(59, 85, 230);
-    // @media screen and (max-width: $tablet) {
-    //     max-width: $mobile;
-    // }
-    // @media screen and (min-width: $tablet) and (max-width: $desktop),
-    // (orientation: landscape) {
-    //     max-width: $tablet;
-    // }
-    // @media screen and (min-width: $desktop) {
-    width: $desktop;
-    // }
+    outline: 1px solid #333;
+    @media screen and (max-width: $mobile) {
+        max-width: $mobile;
+    }
+    @media screen and (min-width: $mobile) and (max-width: $tablet) {
+        width: $mobile;
+    }
+    @media screen and (max-width: $tablet) {
+        padding: 0 30px;
+    }
+    @media screen and (min-width: $tablet) and (max-width: $desktop) {
+        width: $tablet;
+        padding: 0 40px;
+    }
+    @media screen and (min-width: $desktop) {
+        width: $desktop;
+        padding: 0 15px;
+    }
 }
 
+// ,
+// (orientation: landscape)
 .container--flex {
     display: flex;
     // justify-content: space-between;
@@ -72,8 +79,25 @@ ul {
     height: 100vh;
 }
 
+.container--about {
+    @media screen and (max-width: $tablet) {}
+    @media screen and (min-width: $tablet) and (max-width: $desktop) {}
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
 .description-container {
-    width: calc(50% - 15px);
+    // @media screen and (max-width: $tablet) {
+    //     width: calc(50% - 30px);
+    // }
+    @media screen and (min-width: $tablet) and (max-width: $desktop) {
+        width: calc(50% - 40px);
+    }
+    @media screen and (min-width: $desktop) {
+        width: calc(50% - 15px);
+    }
 }
 
 // .container--flex {
@@ -88,12 +112,17 @@ ul {
 // }
 .section-box {
     width: 100%;
-    padding: 130px 0;
-}
-
-.section-box--about {
-    display: flex;
-    justify-content: space-between;
+    // @media screen and (max-width: $mobile) {
+    // }
+    @media screen and (max-width: $tablet) {
+        padding: 84px 0;
+    }
+    @media screen and (min-width: $tablet) and (max-width: $desktop) {
+        padding: 100px 0;
+    }
+    @media screen and (min-width: $desktop) {
+        padding: 130px 0;
+    }
 }
 
 .section-suptitle {
@@ -122,13 +151,18 @@ ul {
 }
 
 .section-title {
-    margin: 20px 0;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
-    font-size: 42px;
-    line-height: 1.17;
+    font-size: 28px;
+    line-height: 1.18;
     letter-spacing: 0.05em;
     color: $text-primary;
+    @media screen and (max-width: $tablet) {}
+    @media screen and (min-width: $tablet) and (max-width: $desktop) {}
+    @media screen and (min-width: $desktop) {
+        margin: 20px 0;
+        font-size: 42px;
+    }
 }
 
 .section-title--lighten {

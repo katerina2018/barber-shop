@@ -1,9 +1,15 @@
 .about-image-box {
-    display: flex;
-    justify-content: space-between;
-    width: calc(50% - 15px);
-}
-
-.description-container {
-    width: calc(50% - 15px);
+    display: none;
+    @media screen and (max-width: $mobile) {
+        background-color: lightcoral;
+    }
+    @media screen and (min-width: $tablet) {
+        background-color: lightcoral;
+        display: flex;
+    }
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        justify-content: space-between;
+        width: calc(50% - 15px);
+    }
 }

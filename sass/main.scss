@@ -1,7 +1,8 @@
 //Utils
-@import 'utils/variables/colors';
-@import 'utils/variables/breakpoints';
-//
+@import 'utils/colors';
+@import 'utils/breakpoints';
+@import 'utils/placeholders';
+//base
 @import 'base/normalize';
 @import 'base/our-normalize';
 //Layout
