@@ -402,6 +402,12 @@ ul {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1200px) {
+  .container--master-tablet {
+    width: 530px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
   .description-container {
     width: calc(50% - 15px);
   }
@@ -930,6 +936,22 @@ ul {
       -ms-flex-pack: justify;
           justify-content: space-between;
   text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .masters-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .master-card:not(:last-child) {
+    margin-bottom: 64px;
+  }
 }
 
 .master-card h4 {

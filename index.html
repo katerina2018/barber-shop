@@ -132,7 +132,7 @@
             </div>
         </section> -->
         <!-- section why-us-section -->
-        <section class="section-box why-us-section">
+        <!-- <section class="section-box why-us-section">
             <div class="container container--flex container--why-us">
                 <div class="description-container description-container--why-us">
                     <ul class="number-list">
@@ -156,16 +156,21 @@
                     <h3 class="section-subtitle section-subtitle--why-us">О нас говорят только хорошее. Но лучше 1 раз увидеть и прочувствовать, чем 10 раз прочитать. </h3>
                 </div>
             </div>
-        </section>
-        <!-- 
+        </section> -->
+
         <section class=" container-js section-box master-section" id="masters-section">
-            <div class="container">
+            <div class="container container--master-tablet">
 
                 <span class="section-suptitle suptitle-primary">для настоящих ценителей атмосферы</span>
                 <h2 class="section-title">Наши мастера</h2>
                 <ul class="masters-list">
                     <li class="wow animate__animated animate__fadeInLeft master-card">
-                        <img src="./images/john-smith.jpg" alt="" width="370">
+                        <picture>
+                            <source srcset="./images/master1-w418.jpg 1x, ./images/master1-w418-@2x.jpg 2x" media="(max-width: 768px)">
+                            <source srcset="./images/master1-w450.jpg 1x, ./images/master1-w450-@2x.jpg 2x" media="(min-width: 768px) and (max-width: 1200px)">
+                            <source srcset="./images/master1-w370.jpg 1x,  ./images/master1-w370-@2x.jpg 2x" media="(min-width: 1200px)">
+                            <img src="./images/master1-w370.jpg" alt="">
+                        </picture>
                         <h4>John Smith</h4>
                         <span>Extreme Barber</span>
                         <ul class="master-social-box">
@@ -201,7 +206,13 @@
                         </ul>
                     </li>
                     <li data-wow-delay='.5s' class="wow animate__animated animate__fadeInLeft master-card">
-                        <img src="./images/michele-doe.jpg" alt="" width="370">
+                        <picture>
+                            <source srcset="./images/master2-w418.jpg 1x, ./images/master2-w418-@2x.jpg 2x" media="(max-width: 768px)">
+                            <source srcset="./images/master2-w450.jpg 1x, ./images/master2-w450-@2x.jpg 2x" media="(min-width: 768px) and (max-width: 1200px)">
+                            <source srcset="./images/master2-w370.jpg 1x,  ./images/master2-w370-@2x.jpg 2x" media="(min-width: 1200px)">
+                            <img src="./images/master2-w370.jpg" alt="">
+                        </picture>
+                        <!-- <img src="./images/michele-doe.jpg" alt="" width="370"> -->
                         <h4>Michele Doe</h4>
                         <span>Extreme Barber</span>
                         <ul class="master-social-box">
@@ -236,7 +247,13 @@
                         </ul>
                     </li>
                     <li data-wow-delay='1s' class="wow animate__animated animate__fadeInLeft master-card">
-                        <img src="./images/alan-black.jpg" alt="" width="370">
+                        <picture>
+                            <source srcset="./images/master3-w418.jpg 1x, ./images/master3-w418-@2x.jpg 2x" media="(max-width: 768px)">
+                            <source srcset="./images/master3-w450.jpg 1x, ./images/master3-w450-@2x.jpg 2x" media="(min-width: 768px) and (max-width: 1200px)">
+                            <source srcset="./images/master3-w370.jpg 1x,  ./images/master3-w370-@2x.jpg 2x" media="(min-width: 1200px)">
+                            <img src="./images/master3-w370.jpg" alt="">
+                        </picture>
+                        <!-- <img src="./images/alan-black.jpg" alt="" width="370"> -->
                         <h4>Alan Black</h4>
                         <span>Extreme Barber</span>
                         <ul class="master-social-box">
@@ -274,12 +291,13 @@
             </div>
         </section> -->
         <!-- section image-gallery start -->
-        <!-- <section class="section-box">
+        <!--<section class="section-box">
             <div class="container ">
 
                 <span class="section-suptitle section-suptitle--primary">На латинском языке “барба” означает “борода”</span>
                 <ul class="gallery">
                     <li class="gallery__item">
+
                         <img src="./images/foto-1.jpg" alt="Стрижка машинкой" width="270">
                         <div class="gallery__description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. </div>
                     </li>
@@ -297,7 +315,7 @@
                     </li>
                 </ul>
             </div>
-        </section> -->
+        </section>-->
     </main>
     <!-- <footer class="container-js section-box footer" id="footer">
         <div class="container">

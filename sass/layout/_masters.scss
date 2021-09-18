@@ -3,9 +3,21 @@
 }
 
 .masters-list {
+    // @media screen and (max-width: $tablet) {
+    // }
+    @media screen and (max-width: $desktop) {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
     display: flex;
     justify-content: space-between;
     text-align: center;
+}
+
+.master-card:not(:last-child) {
+    @media screen and (max-width: $desktop) {
+        margin-bottom: 64px;
+    }
 }
 
 .master-card h4 {

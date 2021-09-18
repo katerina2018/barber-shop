@@ -95,6 +95,12 @@ ul {
     }
 }
 
+.container--master-tablet {
+    @media screen and (min-width: $tablet) and (max-width: $desktop) {
+        width: 530px;
+    }
+}
+
 .description-container {
     // @media screen and (max-width: $tablet) {
     //     width: calc(50% - 30px);
