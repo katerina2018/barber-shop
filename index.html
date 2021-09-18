@@ -74,11 +74,19 @@
 
         <!-- section-about-start -->
 
-        <section class="section-box section-box--about container-js" id="about-section">
+        <!-- <section class="section-box section-box--about container-js" id="about-section">
             <div class="container container--about">
                 <div class="about-image-box description-container">
-                    <img src="./images/about-us-1.jpg" alt="" width="270">
-                    <img src="./images/about-us-2.jpg" alt="" width="270">
+                    <picture>
+                        <source srcset="./images/about-img1-w330.jpg 1x, ./images/about-img1-w330-@2x.jpg 2x" media="(min-width: 768px) and (max-width: 1200px)">
+                        <source srcset="./images/about-img1-w270.jpg 1x,  ./images/about-img1-w270-@2x.jpg 2x" media="(min-width: 1200px)">
+                        <img src="./images/about-img1-w270.jpg" alt="">
+                    </picture>
+                    <picture>
+                        <source srcset="./images/about-img2-w330.jpg 1x, ./images/about-img2-w330-@2x.jpg 2x" media="(min-width: 768px) and (max-width: 1200px)">
+                        <source srcset="./images/about-img2-w270.jpg 1x,  ./images/about-img2-w270-@2x.jpg 2x" media="(min-width: 1200px)">
+                        <img src="./images/about-img2-w270.jpg" alt="">
+                    </picture>
                 </div>
                 <div class="description-container">
                     <span class="section-suptitle section-suptitle--primary">О НАС</span>
@@ -89,7 +97,7 @@
                     <a href="#footer" class="primary-btn primary-btn--darken">онлайн-запись</a>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- section-about-start -->
 
@@ -123,9 +131,10 @@
 
             </div>
         </section> -->
-        <!-- <section class="section-box why-us-section">
-            <div class="container container--flex">
-                <div class="description-container">
+        <!-- section why-us-section -->
+        <section class="section-box why-us-section">
+            <div class="container container--flex container--why-us">
+                <div class="description-container description-container--why-us">
                     <ul class="number-list">
                         <li class="number-item"><span> 600</span>
                             <p> Довольных клиентов в день</p>
@@ -141,13 +150,13 @@
                         </li>
                     </ul>
                 </div>
-                <div class="description-container">
+                <div class="description-container description-container--why-us">
                     <span class="section-suptitle section-suptitle-primary">старая традиционная школа</span>
                     <h2 class="section-title">Почему приходят именно к нам?</h2>
-                    <h3 class="section-subtitle">О нас говорят только хорошее. Но лучше 1 раз <br> увидеть и прочувствовать, чем 10 раз прочитать. </h3>
+                    <h3 class="section-subtitle section-subtitle--why-us">О нас говорят только хорошее. Но лучше 1 раз увидеть и прочувствовать, чем 10 раз прочитать. </h3>
                 </div>
             </div>
-        </section> -->
+        </section>
         <!-- 
         <section class=" container-js section-box master-section" id="masters-section">
             <div class="container">

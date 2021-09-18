@@ -9,25 +9,38 @@
 .price-box {
     display: flex;
     /* justify-content: space-around; */
+    flex-direction: column;
     margin-bottom: 50px;
     font-size: 18px;
     line-height: 1.67;
     letter-spacing: 0.02em;
     color: $text-secondary;
+    @media screen and (max-width: $desktop) {
+        background-image: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+    }
+    @media screen and (min-width: $desktop) {
+        flex-direction: row;
+    }
 }
 
 .price-list {
-    width: 50%;
     display: flex;
     flex-wrap: wrap;
+    @media screen and (min-width: $desktop) {
+        width: 50%;
+    }
 }
 
 .price-list:nth-child(odd) {
-    background-image: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+    @media screen and (min-width: $desktop) {
+        background-image: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+    }
 }
 
 .price-list:nth-child(even) {
-    background-image: linear-gradient(180deg, #090B13 0%, rgba(9, 11, 19, 0.2) 100%);
+    @media screen and (min-width: $desktop) {
+        background-image: linear-gradient(180deg, #090B13 0%, rgba(9, 11, 19, 0.2) 100%);
+    }
 }
 
 .price-item {

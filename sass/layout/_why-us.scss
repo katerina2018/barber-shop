@@ -7,12 +7,17 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    // width: 48%;
-    padding: 0 100px;
+    @media screen and (min-width: $tablet) and (max-width: $desktop) {
+        width: 60%;
+        margin-left: auto;
+    }
+    @media screen and (min-width: $desktop) {
+        padding: 0 100px;
+    }
 }
 
 .number-item {
-    width: 170px;
+    width: 193px;
     height: 133px;
     display: flex;
     flex-direction: column;
@@ -26,6 +31,9 @@
     color: $text-primary;
     &:nth-child(2n) {
         margin-top: 30px;
+    }
+    @media screen and (min-width: $desktop) {
+        width: 170px;
     }
 }
 

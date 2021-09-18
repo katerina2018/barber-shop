@@ -332,7 +332,7 @@ ul {
 
 @media screen and (min-width: 768px) and (max-width: 1200px) {
   .container {
-    width: 768px;
+    width: 780px;
     padding: 0 40px;
   }
 }
@@ -370,6 +370,17 @@ ul {
   height: 100vh;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .container--about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .container--about {
     display: -webkit-box;
@@ -381,15 +392,30 @@ ul {
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .container--why-us {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1200px) {
   .description-container {
-    width: calc(50% - 40px);
+    width: calc(50% - 15px);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .description-container {
     width: calc(50% - 15px);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .description-container--why-us {
+    width: 100%;
   }
 }
 
@@ -448,11 +474,11 @@ ul {
   line-height: 1.18;
   letter-spacing: 0.05em;
   color: #303030;
+  margin: 20px 0;
 }
 
 @media screen and (min-width: 1200px) {
   .section-title {
-    margin: 20px 0;
     font-size: 42px;
   }
 }
@@ -470,6 +496,16 @@ ul {
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: #555555;
+}
+
+.section-subtitle--why-us {
+  margin-bottom: 44px;
+}
+
+@media screen and (min-width: 768px) {
+  .section-subtitle--why-us {
+    width: 500px;
+  }
 }
 
 .section-description {
@@ -688,6 +724,8 @@ ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
@@ -716,6 +754,10 @@ ul {
   display: -ms-flexbox;
   display: flex;
   /* justify-content: space-around; */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 50px;
   font-size: 18px;
   line-height: 1.67;
@@ -723,8 +765,23 @@ ul {
   color: #9DA4BD;
 }
 
+@media screen and (max-width: 1200px) {
+  .price-box {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#171A24), to(rgba(23, 26, 36, 0.2)));
+    background-image: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .price-box {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 .price-list {
-  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -732,14 +789,24 @@ ul {
       flex-wrap: wrap;
 }
 
-.price-list:nth-child(odd) {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#171A24), to(rgba(23, 26, 36, 0.2)));
-  background-image: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+@media screen and (min-width: 1200px) {
+  .price-list {
+    width: 50%;
+  }
 }
 
-.price-list:nth-child(even) {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#090B13), to(rgba(9, 11, 19, 0.2)));
-  background-image: linear-gradient(180deg, #090B13 0%, rgba(9, 11, 19, 0.2) 100%);
+@media screen and (min-width: 1200px) {
+  .price-list:nth-child(odd) {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#171A24), to(rgba(23, 26, 36, 0.2)));
+    background-image: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .price-list:nth-child(even) {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#090B13), to(rgba(9, 11, 19, 0.2)));
+    background-image: linear-gradient(180deg, #090B13 0%, rgba(9, 11, 19, 0.2) 100%);
+  }
 }
 
 .price-item {
@@ -779,11 +846,23 @@ ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0 100px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .number-list {
+    width: 60%;
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .number-list {
+    padding: 0 100px;
+  }
 }
 
 .number-item {
-  width: 170px;
+  width: 193px;
   height: 133px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -808,6 +887,12 @@ ul {
 
 .number-item:nth-child(2n) {
   margin-top: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .number-item {
+    width: 170px;
+  }
 }
 
 .number-item span {

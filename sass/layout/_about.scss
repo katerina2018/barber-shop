@@ -6,6 +6,7 @@
     @media screen and (min-width: $tablet) {
         background-color: lightcoral;
         display: flex;
+        flex-wrap: wrap;
     }
     @media screen and (min-width: $desktop) {
         display: flex;

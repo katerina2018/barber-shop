@@ -50,7 +50,7 @@ ul {
         padding: 0 30px;
     }
     @media screen and (min-width: $tablet) and (max-width: $desktop) {
-        width: $tablet;
+        width: 780px;
         padding: 0 40px;
     }
     @media screen and (min-width: $desktop) {
@@ -59,8 +59,6 @@ ul {
     }
 }
 
-// ,
-// (orientation: landscape)
 .container--flex {
     display: flex;
     // justify-content: space-between;
@@ -81,10 +79,19 @@ ul {
 
 .container--about {
     @media screen and (max-width: $tablet) {}
-    @media screen and (min-width: $tablet) and (max-width: $desktop) {}
+    @media screen and (min-width: $tablet) and (max-width: $desktop) {
+        display: flex;
+        justify-content: space-between;
+    }
     @media screen and (min-width: $desktop) {
         display: flex;
         justify-content: space-between;
+    }
+}
+
+.container--why-us {
+    @media screen and (max-width: $desktop) {
+        flex-direction: column-reverse;
     }
 }
 
@@ -93,10 +100,16 @@ ul {
     //     width: calc(50% - 30px);
     // }
     @media screen and (min-width: $tablet) and (max-width: $desktop) {
-        width: calc(50% - 40px);
+        width: calc(50% - 15px);
     }
     @media screen and (min-width: $desktop) {
         width: calc(50% - 15px);
+    }
+}
+
+.description-container--why-us {
+    @media screen and (max-width: $desktop) {
+        width: 100%;
     }
 }
 
@@ -157,10 +170,10 @@ ul {
     line-height: 1.18;
     letter-spacing: 0.05em;
     color: $text-primary;
+    margin: 20px 0;
     @media screen and (max-width: $tablet) {}
     @media screen and (min-width: $tablet) and (max-width: $desktop) {}
     @media screen and (min-width: $desktop) {
-        margin: 20px 0;
         font-size: 42px;
     }
 }
@@ -178,6 +191,13 @@ ul {
     line-height: 1.67;
     letter-spacing: 0.02em;
     color: $text-primary-lighten;
+}
+
+.section-subtitle--why-us {
+    margin-bottom: 44px;
+    @media screen and (min-width: $tablet) {
+        width: 500px;
+    }
 }
 
 .section-description {
