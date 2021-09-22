@@ -1,12 +1,25 @@
 .gallery {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin-top: 30px;
 }
 
 .gallery__item {
     position: relative;
     overflow: hidden;
+}
+
+.gallery__item:not(:last-child) {
+    @media screen and (max-width: $tablet) {
+        margin-bottom: 30px;
+    }
+}
+
+.gallery__item:not(:nth-last-child(-n + 3)) {
+    @media screen and (min-width: $tablet) and (max-width: $desktop) {
+        margin-bottom: 30px;
+    }
 }
 
 .gallery__description {
