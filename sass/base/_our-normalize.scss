@@ -59,10 +59,37 @@ ul {
     }
 }
 
+.container__footer-outside {
+    @media screen and (min-width: $desktop) {
+        margin: 0 auto;
+        width: $desktop;
+        padding: 0 15px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.container__footer-inside {
+    @media screen and (max-width: $mobile) {
+        max-width: $mobile;
+    }
+    @media screen and (min-width: $mobile) and (max-width: $tablet) {
+        width: $mobile;
+    }
+    @media screen and (max-width: $tablet) {
+        padding: 0 30px;
+    }
+    @media screen and (min-width: $tablet) and (max-width: $desktop) {
+        width: 780px;
+        padding: 0 40px;
+    }
+    @media screen and (max-width: $desktop) {
+        margin: 0 auto;
+    }
+}
+
 .container--flex {
     display: flex;
-    // justify-content: space-between;
-    // align-items: center;
 }
 
 .container--navbar {
@@ -102,9 +129,6 @@ ul {
 }
 
 .description-container {
-    // @media screen and (max-width: $tablet) {
-    //     width: calc(50% - 30px);
-    // }
     @media screen and (min-width: $tablet) and (max-width: $desktop) {
         width: calc(50% - 15px);
     }
@@ -119,20 +143,8 @@ ul {
     }
 }
 
-// .container--flex {
-//     @include centeredFlex();
-// }
-// .container--mobile-menu {
-//     @media screen and (max-width: $tablet - 1px) {
-//         min-height: 60px;
-//         justify-content: space-between;
-//         flex-direction: row-reverse;
-//     }
-// }
 .section-box {
     width: 100%;
-    // @media screen and (max-width: $mobile) {
-    // }
     @media screen and (max-width: $tablet) {
         padding: 84px 0;
     }
@@ -172,20 +184,24 @@ ul {
 .section-title {
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
-    font-size: 28px;
+    font-size: 42px;
     line-height: 1.18;
     letter-spacing: 0.05em;
     color: $text-primary;
     margin: 20px 0;
     @media screen and (max-width: $tablet) {}
     @media screen and (min-width: $tablet) and (max-width: $desktop) {}
-    @media screen and (min-width: $desktop) {
-        font-size: 42px;
-    }
+    @media screen and (min-width: $desktop) {}
 }
 
 .section-title--lighten {
     color: $color-white;
+}
+
+.section-title--center {
+    @media screen and (max-width: $tablet) {
+        text-align: center;
+    }
 }
 
 .section-title--price {
@@ -233,6 +249,14 @@ ul {
     color: $color-white;
     background-color: transparent;
     cursor: pointer;
+}
+
+.primary-btn--footer-form {
+    @media screen and (max-width: $tablet) {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .primary-btn--darken {

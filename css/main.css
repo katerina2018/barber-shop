@@ -344,6 +344,51 @@ ul {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .container__footer-outside {
+    margin: 0 auto;
+    width: 1200px;
+    padding: 0 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container__footer-inside {
+    max-width: 480px;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .container__footer-inside {
+    width: 480px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container__footer-inside {
+    padding: 0 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .container__footer-inside {
+    width: 780px;
+    padding: 0 40px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container__footer-inside {
+    margin: 0 auto;
+  }
+}
+
 .container--flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -476,21 +521,21 @@ ul {
 .section-title {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
-  font-size: 28px;
+  font-size: 42px;
   line-height: 1.18;
   letter-spacing: 0.05em;
   color: #303030;
   margin: 20px 0;
 }
 
-@media screen and (min-width: 1200px) {
-  .section-title {
-    font-size: 42px;
-  }
-}
-
 .section-title--lighten {
   color: #FFFFFF;
+}
+
+@media screen and (max-width: 768px) {
+  .section-title--center {
+    text-align: center;
+  }
 }
 
 .section-title--price {
@@ -545,6 +590,14 @@ ul {
   color: #FFFFFF;
   background-color: transparent;
   cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .primary-btn--footer-form {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .primary-btn--darken {
@@ -1068,34 +1121,60 @@ ul {
 
 .footer {
   background-color: #191C26;
-  background-image: url(../images/bg-footer.png);
-  background-repeat: no-repeat;
-  background-size: 50% 100%;
-  background-position: right center;
 }
 
-.footer__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (min-width: 1200px) {
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-image: url(../images/bg-footer.png);
+    background-repeat: no-repeat;
+    background-size: 50% auto;
+    background-position: right center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .footer-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 50%;
   height: inherit;
-  padding-right: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-form {
+    padding-top: 84px;
+    padding-bottom: 84px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-form {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-form {
+    width: calc(50% - 15px);
+  }
 }
 
 .footer-form form {
   margin-top: 40px;
+}
+
+@media screen and (max-width: 480px) {
+  .footer-form form {
+    width: 100%;
+  }
 }
 
 .footer-form .form-field {
@@ -1110,7 +1189,7 @@ ul {
 .footer-form .form-label {
   position: relative;
   display: inline-block;
-  width: calc(50% - 15px);
+  width: calc(50% - 3px);
 }
 
 .form-label:hover .form-field,
@@ -1199,27 +1278,73 @@ textarea.form-field:not(:placeholder-shown) {
 }
 
 .footer-contacts {
-  width: 50%;
   height: inherit;
-}
-
-.footer-contacts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding-left: 100px;
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: #9DA4BD;
 }
 
+@media screen and (max-width: 768px) {
+  .footer-contacts {
+    padding-top: 84px;
+    padding-bottom: 84px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-contacts {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .footer-contacts {
+    background-image: url(../images/bg-footer.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-contacts {
+    padding-left: 100px;
+    width: calc(50% - 15px);
+    background-size: 50% auto;
+    background-position: right center;
+  }
+}
+
+.footer-address {
+  padding-top: 20px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .footer-address {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .footer-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .contacts-box {
   padding-left: 50px;
+  font-style: normal;
 }
 
 .contacts-box-item {
@@ -1234,8 +1359,6 @@ textarea.form-field:not(:placeholder-shown) {
   left: -40px;
   width: 24px;
   height: 24px;
-  /* background-color: lavender; */
-  /* background-image: url(../images/icons/map-pin.svg); */
 }
 
 .contacts-box li:nth-of-type(1)::before {
@@ -1257,6 +1380,12 @@ textarea.form-field:not(:placeholder-shown) {
 
 .schedule-box {
   margin-top: auto;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .schedule-box {
+    margin-top: 0px;
+  }
 }
 
 .schedule-box p {
@@ -1282,6 +1411,22 @@ textarea.form-field:not(:placeholder-shown) {
   color: #9DA4BD;
 }
 
+@media screen and (max-width: 768px) {
+  .copyright-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .copy-test {
+    margin-right: auto;
+  }
+}
+
 .social {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1298,6 +1443,12 @@ textarea.form-field:not(:placeholder-shown) {
   width: 60px;
   height: 1px;
   background-color: #303030;
+}
+
+@media screen and (max-width: 768px) {
+  .social {
+    margin-left: auto;
+  }
 }
 
 .social__item:not(:last-child) {

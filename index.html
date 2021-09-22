@@ -25,7 +25,7 @@
 
     <header id="top">
         <!-- main-nav- start -->
-        <!-- <nav id="main-nav" class="navbar navbar-default">
+        <nav id="main-nav" class="navbar navbar-default">
 
             <div class="container container--navbar">
                 <div class="nav-holder">
@@ -49,10 +49,10 @@
                         онлайн-запись</a>
                 </div>
             </div>
-        </nav> -->
+        </nav>
         <!-- main-nav-start -->
 
-        <!-- <div class="container container--hero">
+        <div class="container container--hero">
 
             <aside class="sidebar wow animate__animated animate__fadeInLeft">
                 <ul>
@@ -68,13 +68,13 @@
                     <p class="hero-description">Мы эксперты в модных мужских стрижках. <br> Работаем быстро, осторожно и со вкусом.</p>
                 </div>
             </div>
-        </div> -->
+        </div>
     </header>
     <main>
 
         <!-- section-about-start -->
 
-        <!-- <section class="section-box section-box--about container-js" id="about-section">
+        <section class="section-box section-box--about container-js" id="about-section">
             <div class="container container--about">
                 <div class="about-image-box description-container">
                     <picture>
@@ -97,11 +97,11 @@
                     <a href="#footer" class="primary-btn primary-btn--darken">онлайн-запись</a>
                 </div>
             </div>
-        </section> -->
+        </section>
 
         <!-- section-about-start -->
 
-        <!-- <section class=" container-js section-box price-section" id="price-section">
+        <section class=" container-js section-box price-section" id="price-section">
             <div class="container">
                 <span class="section-suptitle section-suptitle--senondary">Проведи время в компании лучших мастеров</span>
                 <h2 class="section-title section-title--lighten section-title--price">Услуги и цены</h2>
@@ -130,9 +130,9 @@
                 <div class="btn-wrapper"> <a href="#footer" class="primary-btn">онлайн-запись</a></div>
 
             </div>
-        </section> -->
+        </section>
         <!-- section why-us-section -->
-        <!-- <section class="section-box why-us-section">
+        <section class="section-box why-us-section">
             <div class="container container--flex container--why-us">
                 <div class="description-container description-container--why-us">
                     <ul class="number-list">
@@ -156,9 +156,9 @@
                     <h3 class="section-subtitle section-subtitle--why-us">О нас говорят только хорошее. Но лучше 1 раз увидеть и прочувствовать, чем 10 раз прочитать. </h3>
                 </div>
             </div>
-        </section> -->
+        </section>
         <!-- master section start-->
-        <!--<section class=" container-js section-box master-section" id="masters-section">
+        <section class=" container-js section-box master-section" id="masters-section">
             <div class="container container--master-tablet">
 
                 <span class="section-suptitle suptitle-primary">для настоящих ценителей атмосферы</span>
@@ -212,7 +212,7 @@
                             <source srcset="./images/master2-w370.jpg 1x,  ./images/master2-w370-@2x.jpg 2x" media="(min-width: 1200px)">
                             <img src="./images/master2-w370.jpg" alt="">
                         </picture>
-                      
+
                         <h4>Michele Doe</h4>
                         <span>Extreme Barber</span>
                         <ul class="master-social-box">
@@ -253,7 +253,7 @@
                             <source srcset="./images/master3-w370.jpg 1x,  ./images/master3-w370-@2x.jpg 2x" media="(min-width: 1200px)">
                             <img src="./images/master3-w370.jpg" alt="">
                         </picture>
-                       
+
                         <h4>Alan Black</h4>
                         <span>Extreme Barber</span>
                         <ul class="master-social-box">
@@ -289,9 +289,9 @@
                     </li>
                 </ul>
             </div>
-        </section> -->
+        </section>
         <!-- section image-gallery start -->
-        <!-- <section class="section-box">
+        <section class="section-box">
             <div class="container ">
                 <span class="section-suptitle section-suptitle--primary">На латинском языке “барба” означает “борода”</span>
                 <ul class="gallery">
@@ -337,14 +337,14 @@
                     </li>
                 </ul>
             </div>
-        </section> -->
+        </section>
     </main>
     <!-- footer start -->
-    <footer class="container-js section-box footer" id="footer">
-        <div class="container">
-            <div class="footer__content">
-                <div class="footer-form">
-                    <h2 class="section-title section-title--lighten">Онлайн-запись</h2>
+    <footer class="container-js  footer" id="footer">
+        <div class="container__footer-outside">
+            <div class="footer-form">
+                <div class="container__footer-inside">
+                    <h2 class="section-title section-title--lighten section-title--center">Онлайн-запись</h2>
                     <form>
                         <label for="userName" class="form-label">
                     
@@ -356,29 +356,33 @@
                 <input type="tel" name="userPhone" id="userPhone" class="form-field" 
                 placeholder=" "required><legend>Телефон*</legend></label>
                         <textarea name="userMessage" class="form-field" id="" cols="30" rows="10" placeholder="Сообщение"></textarea>
-                        <button type="submit" class="primary-btn">Отправить</button>
+                        <button type="submit" class="primary-btn primary-btn--footer-form">Отправить</button>
                     </form>
                 </div>
-                <div class="footer-contacts">
-                    <h2 class="section-title section-title--lighten">Контакты</h2>
-                    <address>
+            </div>
+            <div class="footer-contacts">
+                <div class="container__footer-inside">
+                    <h2 class="section-title section-title--lighten section-title--center">Контакты</h2>
+                    <div class="footer-wrapper">
+                        <address class="footer-address">
                 <ul class="contacts-box">
                     <li class="contacts-box-item"  class="address">ул. Васильковая, 7А <br>
                         Киев, 08132</li>
                     <li class="contacts-box-item" ><a href="tel:+">+38 044 111 11 11</a> </li>
                     <li class="contacts-box-item" ><a href="mailto:">barbershop@email.com</a> </li>
                 </ul>
-            </address>
-                    <div class="schedule-box">
-                        <h4 class="section-suptitle section-suptitle--secondary">время работы</h4>
-                        <p>Ежедневно с 9:00 до 22:00</p>
+                    </address>
+                        <div class="schedule-box">
+                            <h4 class="section-suptitle section-suptitle--secondary">время работы</h4>
+                            <p>Ежедневно с 9:00 до 22:00</p>
+                        </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </footer>
-    <!-- <div class="copyright">
+    <!-- footer copyright -->
+    <div class="copyright">
         <div class="container">
             <div class="copyright-content">
                 <p class="copy-test">&copy; Copyright <span>2020</span> </p>
@@ -390,7 +394,7 @@
                 </ul>
             </div>
         </div>
-    </div> -->
+    </div>
 
 
     <script src="./js/scroll.js"></script>

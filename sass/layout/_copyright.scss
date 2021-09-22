@@ -9,6 +9,16 @@
     line-height: 1.36;
     letter-spacing: 0.2em;
     color: #9DA4BD;
+    @media screen and (max-width: $tablet) {
+        flex-direction: column-reverse;
+        padding-bottom: 40px;
+    }
+}
+
+.copy-test {
+    @media screen and (max-width: $tablet) {
+        margin-right: auto;
+    }
 }
 
 .social {
@@ -21,6 +31,9 @@
         width: 60px;
         height: 1px;
         background-color: #303030;
+    }
+    @media screen and (max-width: $tablet) {
+        margin-left: auto;
     }
 }
 
