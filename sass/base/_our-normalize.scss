@@ -96,12 +96,20 @@ ul {
     padding: 10px 15px;
     display: flex;
     justify-content: space-between;
+    position: relative;
+    @media screen and (max-width: $tablet) {
+        flex-direction: column;
+    }
 }
 
 .container--hero {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     height: 100vh;
+    position: relative;
+    @media screen and (min-width: $tablet) {
+        padding-left: 200px;
+    }
 }
 
 .container--about {
@@ -249,6 +257,12 @@ ul {
     color: $color-white;
     background-color: transparent;
     cursor: pointer;
+}
+
+.color-mobile-menu {
+    @media screen and (max-width: $tablet) {
+        color: $text-primary;
+    }
 }
 
 .primary-btn--footer-form {

@@ -24,43 +24,59 @@
 
 
     <header id="top">
+        <div class="header-bg"></div>
         <!-- main-nav- start -->
-        <nav id="main-nav" class="navbar navbar-default">
+        <div id="main-nav" class="navbar navbar-default">
 
             <div class="container container--navbar">
-                <div class="nav-holder">
+                <div class="top-line-mobile">
                     <a id="logoimg" class="navbar-brand scroll" href="#top"> <svg class="logoimg">
                     <use href="./images/sprite.svg#icon-logo"></use>
                 </svg></a>
-                    <ul class="nav-items">
-                        <li class="nav-item "><a href="#about-section" class="nav-link scroll ">О нас</a> </li>
-                        <li class="nav-item"><a href="#price-section" class="nav-link scroll">Услуги и цены</a> </li>
-                        <li class="nav-item"><a href="#masters-section" class="nav-link scroll">Мастера</a> </li>
-                        <li class="nav-item">
-                            <a href="#footer" class="nav-link scroll">
+                    <button type="button" class="btn-burger-menu js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg class="icon-burger-menu-open">
+                    <use href="./images/sprite.svg#icon-menu_24px"></use>
+                </svg>
+                </button></div>
+                <div class="mobile-menu-wrapper   menu-container js-menu-container" id="mobile-menu">
+
+                    <button class="btn-burger-menu js-close-menu">
+                            <svg class="icon-burger-menu-close">
+                                <use href="../images/sprite.svg#icon-close_24px"></use>
+                            </svg>
+                        </button>
+                    <nav class="nav-holder">
+                        <ul class="nav-items">
+                            <li class="nav-item js-close-menu"><a href="#about-section" class="nav-link scroll ">О нас</a> </li>
+                            <li class="nav-item js-close-menu"><a href="#price-section" class="nav-link scroll">Услуги и цены</a> </li>
+                            <li class="nav-item js-close-menu"><a href="#masters-section" class="nav-link scroll">Мастера</a> </li>
+                            <li class="nav-item js-close-menu">
+                                <a href="#footer" class="nav-link scroll">
                                 Контакты</a>
-                        </li>
-                    </ul>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="btn-box">
+                        <a href="tel:+" class="phone-link  ">+38 044 111 11 11</a>
+                        <a href="#footer" class="primary-btn color-mobile-menu js-close-menu">
+                        онлайн-запись</a>
+                    </div>
                 </div>
 
-                <div class="btn-box">
-                    <a href="tel:+" class="phone-link">+38 044 111 11 11</a>
-                    <a href="#footer" class="primary-btn ">
-                        онлайн-запись</a>
-                </div>
             </div>
-        </nav>
+        </div>
         <!-- main-nav-start -->
 
         <div class="container container--hero">
 
-            <aside class="sidebar wow animate__animated animate__fadeInLeft">
+            <!-- wow animate__animated animate__fadeInLeft -->
+            <aside class="sidebar ">
                 <ul>
                     <li><a href="" class="social-link">Instagram</a></li>
                     <li> <a href="" class="social-link">Youtube</a></li>
                 </ul>
             </aside>
-
             <div class="slider">
                 <div class="slide">
                     <span lang="en" class="section-suptitle section-suptitle--senondary">A hair salon for men in Kyiv</span>
@@ -68,6 +84,7 @@
                     <p class="hero-description">Мы эксперты в модных мужских стрижках. <br> Работаем быстро, осторожно и со вкусом.</p>
                 </div>
             </div>
+
         </div>
     </header>
     <main>
@@ -396,7 +413,7 @@
         </div>
     </div>
 
-
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/scroll.js"></script>
     <script src="./js/wow.min.js"></script>
     <script>

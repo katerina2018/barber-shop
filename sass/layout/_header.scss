@@ -1,3 +1,33 @@
+header {
+    // position: relative;
+    height: 100vh;
+}
+
+.header-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(45deg, #00000026, #00000025), url(../images/slider-3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    @media screen and (min-width: $tablet) {
+        width: 78%;
+    }
+    @media screen and (min-width: $desktop) {
+        width: 89%;
+    }
+}
+
+.top-line-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .navbar {
     width: 100%;
     position: fixed;
@@ -24,22 +54,102 @@
     background: rgb(255, 255, 255);
     border-radius: 32px;
     padding: 5px;
+    @media screen and (max-width: $tablet) {
+        & .logoimg {
+            fill: $secondary-color;
+        }
+    }
 }
 
 .logoimg {
     width: 68px;
     height: 56px;
-    fill: $text-primary;
+    fill: $color-white;
+    @media screen and (min-width: $tablet) {
+        fill: $text-primary;
+    }
     // animation-name: infiniteRotate;
     // animation-duration: 5s;
     // animation-iteration-count: infinite;
 }
 
+.btn-burger-menu {
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    margin-left: auto;
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
+}
+
+.icon-burger-menu-open {
+    width: 24px;
+    height: 16px;
+    fill: $color-white;
+}
+
+.icon-burger-menu-close {
+    width: 20px;
+    height: 20px;
+}
+
+// ---
+.menu-container {
+    @media screen and (max-width: $tablet) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
+        // justify-content: space-between;
+        padding: 15px 40px;
+        background-color: $color-white;
+        z-index: 10;
+        transform: translateX(100%);
+        transition: transform 250ms ease-in-out;
+    }
+    @media screen and (min-width: $tablet) {
+        display: block;
+    }
+}
+
+.menu-container.is-open {
+    transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #fff;
+}
+
+// ---
+.mobile-menu-wrapper {
+    @media screen and (max-width: $tablet) {
+        background-color: $color-white;
+        color: $secondary-color;
+    }
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
 .nav-items {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    margin-left: 70px;
+    @media screen and (min-width: $tablet) {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        margin-left: 70px;
+    }
 }
 
 .nav-item:not(:last-child) {
@@ -49,12 +159,19 @@
 .nav-link {
     font-weight: 600;
     padding: 20px 0;
-    font-size: 12px;
+    font-size: 18px;
     line-height: 1.33;
     letter-spacing: 0.1em;
-    color: $color-white;
+    color: $secondary-color;
     &:hover {
         color: $primary-color;
+    }
+    @media screen and (min-width: $tablet) {
+        font-size: 12px;
+        color: $color-white;
+        &:hover {
+            color: $primary-color;
+        }
     }
 }
 
@@ -63,13 +180,19 @@
 }
 
 .sidebar {
-    width: 100px;
-    height: 0;
+    background-color: $color-white;
+    position: absolute;
+    left: calc(-100vh / 2 + 47px);
+    width: 100vh;
+    transform: rotate(-90deg);
+    @media screen and (max-width: $tablet) {
+        display: none;
+    }
 }
 
 .sidebar>ul {
     width: max-content;
-    transform: rotate(-90deg);
+    // transform: rotate(-90deg);
     transform-origin: top left;
     display: flex;
     &::before {
@@ -100,29 +223,45 @@
 }
 
 .btn-box {
-    display: flex;
-    align-items: center;
+    @media screen and (min-width: $tablet) and (max-width: $desktop) {
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+    }
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .phone-link {
     margin-right: 40px;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 18px;
     line-height: 1.33;
     letter-spacing: 0.1em;
-    color: #FFFFFF;
+    color: $text-primary;
+    @media screen and (max-width: $tablet) {
+        padding-top: 64px;
+        padding-bottom: 24px;
+    }
+    @media screen and (min-width: $tablet) and (max-width: $desktop) {
+        margin-right: 0;
+    }
+    @media screen and (min-width: $tablet) {
+        color: $color-white;
+        font-size: 12px;
+    }
 }
 
 .slider {
-    height: 100%;
-    width: calc(100% - 100px);
-    display: flex;
-    align-items: center;
-    padding-left: 100px;
-    background-image: linear-gradient(45deg, #00000026, #00000025), url(../images/slider-3.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    // height: 100%;
+    // width: calc(100% - 100px);
+    // display: flex;
+    // align-items: center;
+    // padding-left: 100px;
+    position: relative;
 }
 
 .hero-title {
