@@ -26,6 +26,7 @@
 .price-list {
     display: flex;
     flex-wrap: wrap;
+    border-radius: 10px;
     @media screen and (min-width: $desktop) {
         width: 50%;
     }
@@ -48,10 +49,21 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 0 40px;
+    padding: 0 2px;
     margin-top: 20px;
     font-size: 18px;
     line-height: 1.67;
     letter-spacing: 0.02em;
     color: $text-secondary;
+    @media screen and (min-width: 450px) {
+        padding: 0 40px;
+    }
+}
+
+.price-item>p {
+    padding-right: 30px;
+}
+
+.price-item>span {
+    min-width: 34%;
 }

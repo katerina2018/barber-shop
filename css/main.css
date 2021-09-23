@@ -590,12 +590,13 @@ ul {
 }
 
 .btn-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  min-width: 160px;
 }
 
 .primary-btn {
@@ -1066,6 +1067,7 @@ header {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  border-radius: 10px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1099,12 +1101,26 @@ header {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  padding: 0 40px;
+  padding: 0 2px;
   margin-top: 20px;
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: #9DA4BD;
+}
+
+@media screen and (min-width: 450px) {
+  .price-item {
+    padding: 0 40px;
+  }
+}
+
+.price-item > p {
+  padding-right: 30px;
+}
+
+.price-item > span {
+  min-width: 34%;
 }
 
 .why-us-section {
@@ -1440,7 +1456,7 @@ header {
 .form-label legend {
   position: absolute;
   top: -3px;
-  color: #585757;
+  color: #9da4bd66;
   text-transform: uppercase;
   -webkit-transition: -webkit-transform .1s ease;
   transition: -webkit-transform .1s ease;
