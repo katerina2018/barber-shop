@@ -1,10 +1,6 @@
 .about-image-box {
     display: none;
-    @media screen and (max-width: $mobile) {
-        background-color: lightcoral;
-    }
     @media screen and (min-width: $tablet) {
-        background-color: lightcoral;
         display: flex;
         flex-wrap: wrap;
     }
