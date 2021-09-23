@@ -191,14 +191,14 @@ ul {
 .section-title {
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
-    font-size: 42px;
+    font-size: 28px;
     line-height: 1.18;
     letter-spacing: 0.05em;
     color: $text-primary;
     margin: 20px 0;
-    @media screen and (max-width: $tablet) {}
-    @media screen and (min-width: $tablet) and (max-width: $desktop) {}
-    @media screen and (min-width: $desktop) {}
+    @media screen and (min-width: $desktop) {
+        font-size: 42px;
+    }
 }
 
 .section-title--lighten {

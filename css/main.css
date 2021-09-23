@@ -537,11 +537,17 @@ ul {
 .section-title {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
-  font-size: 42px;
+  font-size: 28px;
   line-height: 1.18;
   letter-spacing: 0.05em;
   color: #303030;
   margin: 20px 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .section-title {
+    font-size: 42px;
+  }
 }
 
 .section-title--lighten {
@@ -759,8 +765,10 @@ header {
     padding: 15px 40px;
     background-color: #FFFFFF;
     z-index: 10;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    -webkit-transform: translateX(100%) scaleX(0);
+            transform: translateX(100%) scaleX(0);
+    -webkit-transform-origin: right;
+            transform-origin: right;
     -webkit-transition: -webkit-transform 250ms ease-in-out;
     transition: -webkit-transform 250ms ease-in-out;
     transition: transform 250ms ease-in-out;
@@ -775,8 +783,8 @@ header {
 }
 
 .menu-container.is-open {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  -webkit-transform: translateX(0) scaleX(1);
+          transform: translateX(0) scaleX(1);
 }
 
 .menu-container .menu-toggle {
@@ -967,10 +975,16 @@ header {
   margin: 20px 0;
   font-family: Raleway, sans-serif;
   font-weight: 700;
-  font-size: 72px;
+  font-size: 48px;
   line-height: 1.18;
   letter-spacing: 0.05em;
   color: #FFFFFF;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-title {
+    font-size: 72px;
+  }
 }
 
 .hero-description {
@@ -1113,6 +1127,14 @@ header {
           justify-content: space-between;
 }
 
+@media screen and (max-width: 450px) {
+  .number-list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1200px) {
   .number-list {
     width: 60%;
@@ -1150,8 +1172,16 @@ header {
   color: #303030;
 }
 
-.number-item:nth-child(2n) {
-  margin-top: 30px;
+@media screen and (max-width: 450px) {
+  .number-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  .number-item:nth-child(2n) {
+    margin-top: 30px;
+  }
 }
 
 @media screen and (min-width: 1200px) {

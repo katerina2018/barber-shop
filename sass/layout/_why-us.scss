@@ -7,6 +7,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    @media screen and (max-width: 450px) {
+        justify-content: center;
+    }
     @media screen and (min-width: $tablet) and (max-width: $desktop) {
         width: 60%;
         margin-left: auto;
@@ -29,8 +32,16 @@
     text-align: center;
     letter-spacing: 0.05em;
     color: $text-primary;
-    &:nth-child(2n) {
-        margin-top: 30px;
+    @media screen and (max-width: 450px) {
+        // margin-top: 0;
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+    @media screen and (min-width: 450px) {
+        &:nth-child(2n) {
+            margin-top: 30px;
+        }
     }
     @media screen and (min-width: $desktop) {
         width: 170px;

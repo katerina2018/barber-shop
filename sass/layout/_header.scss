@@ -107,11 +107,11 @@ header {
         overflow-y: scroll;
         display: flex;
         flex-direction: column;
-        // justify-content: space-between;
         padding: 15px 40px;
         background-color: $color-white;
         z-index: 10;
-        transform: translateX(100%);
+        transform: translateX(100%) scaleX(0);
+        transform-origin: right;
         transition: transform 250ms ease-in-out;
     }
     @media screen and (min-width: $tablet) {
@@ -120,7 +120,7 @@ header {
 }
 
 .menu-container.is-open {
-    transform: translateX(0);
+    transform: translateX(0) scaleX(1);
 }
 
 .menu-container .menu-toggle {
@@ -192,7 +192,6 @@ header {
 
 .sidebar>ul {
     width: max-content;
-    // transform: rotate(-90deg);
     transform-origin: top left;
     display: flex;
     &::before {
@@ -256,11 +255,6 @@ header {
 }
 
 .slider {
-    // height: 100%;
-    // width: calc(100% - 100px);
-    // display: flex;
-    // align-items: center;
-    // padding-left: 100px;
     position: relative;
 }
 
@@ -268,10 +262,13 @@ header {
     margin: 20px 0;
     font-family: Raleway, sans-serif;
     font-weight: 700;
-    font-size: 72px;
+    font-size: 48px;
     line-height: 1.18;
     letter-spacing: 0.05em;
     color: $color-white;
+    @media screen and (min-width: $tablet) {
+        font-size: 72px;
+    }
 }
 
 .hero-description {
