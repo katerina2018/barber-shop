@@ -1033,7 +1033,6 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /* justify-content: space-around; */
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1101,7 +1100,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  padding: 0 2px;
+  padding: 0 5px;
   margin-top: 20px;
   font-size: 18px;
   line-height: 1.67;
@@ -1116,11 +1115,11 @@ header {
 }
 
 .price-item > p {
-  padding-right: 30px;
+  padding-right: 20px;
 }
 
 .price-item > span {
-  min-width: 34%;
+  min-width: 30%;
 }
 
 .why-us-section {
