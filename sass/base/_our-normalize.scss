@@ -92,12 +92,15 @@ ul {
 }
 
 .container--navbar {
-    padding: 10px 15px;
+    padding: 4px 30px;
     display: flex;
     justify-content: space-between;
     position: relative;
     @media screen and (max-width: $tablet) {
         flex-direction: column;
+    }
+    @media screen and (min-width: $tablet) {
+        padding: 10px 30px;
     }
 }
 
@@ -261,12 +264,13 @@ ul {
     color: $color-white;
     background-color: transparent;
     cursor: pointer;
+    transition: color $function-time, background-color $function-time;
 }
 
-.color-mobile-menu {
-    @media screen and (max-width: $tablet) {
-        color: $text-primary;
-    }
+.primary-btn:hover,
+.primary-btn:focus {
+    background-color: $primary-color;
+    color: $color-white;
 }
 
 .primary-btn--footer-form {
@@ -279,4 +283,10 @@ ul {
 
 .primary-btn--darken {
     color: $text-primary;
+}
+
+.color-mobile-menu {
+    @media screen and (max-width: $tablet) {
+        color: $text-primary;
+    }
 }
