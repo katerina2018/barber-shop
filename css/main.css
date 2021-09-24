@@ -759,11 +759,13 @@ header {
 
 .icon-burger-menu-close {
   position: relative;
+  left: -60px;
   z-index: 5;
   background-color: blanchedalmond;
   width: 20px;
   height: 20px;
-  fill: #303030;
+  fill: black;
+  stroke: black;
 }
 
 @media screen and (max-width: 768px) {
