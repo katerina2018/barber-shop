@@ -761,8 +761,7 @@ header {
   background-color: blanchedalmond;
   width: 20px;
   height: 20px;
-  fill: black;
-  stroke: black;
+  fill: #191C26;
 }
 
 @media screen and (max-width: 768px) {
