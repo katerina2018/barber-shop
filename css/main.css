@@ -762,6 +762,7 @@ header {
 .icon-burger-menu-close {
   width: 20px;
   height: 20px;
+  fill: #303030;
 }
 
 @media screen and (max-width: 768px) {
