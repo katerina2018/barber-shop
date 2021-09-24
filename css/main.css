@@ -829,6 +829,12 @@ header {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .nav-items {
+    width: 100%;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .nav-items {
     height: 100%;
@@ -842,8 +848,16 @@ header {
   }
 }
 
-.nav-item:not(:last-child) {
-  margin-right: 40px;
+@media screen and (max-width: 768px) {
+  .nav-item {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav-item:not(:last-child) {
+    margin-right: 40px;
+  }
 }
 
 .nav-link {
